@@ -109,7 +109,7 @@
 			array('(GMT+12:00) Fiji Islands, Kamchatka, Marshall Islands',		'Pacific/Fiji',			'Fiji Standard Time'),
 			array('(GMT+12:00) Magadan',						'Asia/Magadan',			''),
 			array('(GMT+13:00) Nuku\'alofa',					'Pacific/Tongatapu',		'Tonga Standard Time'),
-			array('(GMT+13:00) Samoa',						'Pacific/Samoa',		''),
+			array('(GMT+13:00) Samoa',						'Pacific/Apia',			''),
 		);
 	}
 
