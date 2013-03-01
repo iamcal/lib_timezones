@@ -44,6 +44,16 @@ Once you have a timezone ID, you can switch to it very simply:
     date_default_timezone_set($id);
 
 
+## Using this in JavaScript
+
+The JavaScript version of this data is available in `lib_timezones.js`, which also exports
+a global function called `timezones_list()` in the same format.
+
+Detecting the actual timezone (rather than just the current offset from GMT) is a pain in 
+JavaScript. The JS library contains a function (`timezones_guess()`) that returns a best 
+guess at the local timezone, as a `zone.tab` identifier.
+
+
 ## Using this in other languages
 
 While the main library is written in PHP, exporting it in a format usable in other languages 
