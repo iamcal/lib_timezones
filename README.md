@@ -7,7 +7,7 @@ you'll need to get a list of timezones from somewhere. These are some bad ways t
    savings, nor the many timezones that are not a whole hour (or half hour)
    offset from GMT.
 *  Free-form offset from GMT. This does not handle daylight savings.
-*  GMT offset plus daylight savings toggle. daylight savings starts and ends
+*  GMT offset plus daylight savings toggle. Daylight savings starts and ends
    at different times in different places, and offsets the time by different
    amounts.
 *  List the `zone.tab` zones. There are currently 548 of these and they are mostly 
