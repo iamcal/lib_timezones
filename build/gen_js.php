@@ -24,7 +24,11 @@
 		$wo = date_offset_get($winter) / 60;
 
 		$key = $so.':'.$wo;
-		if (!array_key_exists($key, $map)) $map[$key] = $row[1];
+		if ($row[2]){
+			$map[$key] = $row[1];
+		}else{
+			if (!array_key_exists($key, $map)) $map[$key] = $row[1];
+		}
 	}
 
 
