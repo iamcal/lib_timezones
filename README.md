@@ -69,3 +69,6 @@ an issue and I'll add it.
 *  Timezones change over time and a city/country that once shared daylight savings with another
    may stop doing so. This data is intended to be a living document, updated as important 
    timezone changes are made.
+*  The JavaScript guessing function does not pick the most common timezones for each offset pair.
+   This can be fixed by picking more/better sampling dates or simply placing a priority on each
+   zone in the original data. I plan on fixing this.
