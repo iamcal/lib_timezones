@@ -1,4 +1,10 @@
 
+function timezones_list(){
+
+	return _timezones_list;
+}
+
+
 //
 // technique based on this article:
 // http://blog.redfin.com/devblog/2007/08/getting_the_time_zone_from_a_web_browser.html
@@ -10,6 +16,6 @@ function timezones_guess(){
 	var wo = -1 * new Date(Date.UTC(2005, 12, 30, 0, 0, 0, 0)).getTimezoneOffset();
 	var key = so + ':' + wo;
 
-	return timezones_map[key] ? timezones_map[key] : 'US/Pacific';
+	return _timezones_map[key] ? _timezones_map[key] : 'US/Pacific';
 }
 

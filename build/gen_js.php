@@ -31,4 +31,5 @@
 	$lines = file('timezones.js.template');
 	echo implode('', $lines);
 
-	echo "\nvar timezones_map = ".json_encode($map).";\n";
+	echo "\nvar _timezones_map = ".json_encode($map).";\n";
+	echo "\nvar _timezones_list = ".json_encode($zones).";\n";
