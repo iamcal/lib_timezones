@@ -25,7 +25,7 @@
 
 <p>If you have JavaScript enabled, it should auto-select your current timezone.</p>
 
-<script src="../timezones.js"></script>
+<script src="../lib_timezones.js"></script>
 <script>
 
 window.onload = function(){
