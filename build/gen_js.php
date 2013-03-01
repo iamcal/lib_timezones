@@ -39,7 +39,7 @@
 	foreach ($map as $k => $v) $map_lines[] = "\t'$k':\t'$v'";
 
 	$zone_lines = array();
-	foreach ($zones as $row) $zone_lines[] = "\t['{$row[0]}', '{$row[1]}']";
+	foreach ($zones as $row) $zone_lines[] = "\t[\"{$row[0]}\", '{$row[1]}']";
 
 	echo "\nvar _timezones_map = {\n".implode(",\n", $map_lines)."\n};\n";
 	echo "\nvar _timezones_list = [\n".implode(",\n", $zone_lines)."\n];\n";
