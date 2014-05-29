@@ -8,8 +8,8 @@
 	$summer = date_create();
 	$winter = date_create();
 
-	date_timestamp_set($summer, gmmktime(0,0,0,6,30,2005));
-	date_timestamp_set($winter, gmmktime(0,0,0,12,30,2005));
+	date_timestamp_set($summer, gmmktime(0,0,0,6,30,2012));
+	date_timestamp_set($winter, gmmktime(0,0,0,12,30,2012));
 
 	$zones = timezones_list();
 	$map = array();
