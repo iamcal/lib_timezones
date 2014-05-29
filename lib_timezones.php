@@ -44,7 +44,7 @@
 			array('(GMT-04:00) Santiago',						'America/Santiago',		true,	'Chile Standard Time',			'Chile Summer Time'),
 			array('(GMT-03:30) Newfoundland and Labrador',				'America/St_Johns',		false,	'Newfoundland Standard Time',		'Newfoundland Daylight Time'),
 			array('(GMT-03:00) Brasilia',						'America/Sao_Paulo',		true,	'Brasilia Time',			'Brasilia Summer Time'),
-			array('(GMT-03:00) Buenos Aires	',					'America/Buenos_Aires',		true,	'Argentina Time',			null),
+			array('(GMT-03:00) Buenos Aires',					'America/Buenos_Aires',		true,	'Argentina Time',			null),
 			array('(GMT-03:00) Cayenne, Fortaleza',					'America/Cayenne',		false,	'French Guiana Time',			null), # also Brasilia Time
 			array('(GMT-03:00) Greenland',						'America/Godthab',		false,	'West Greenland Time',			'Western Greenland Summer Time'),
 			array('(GMT-03:00) Montevideo',						'America/Montevideo',		false,	'Uruguay Time',				'Uruguay Summer Time'),
@@ -52,14 +52,16 @@
 			array('(GMT-02:00) Mid-Atlantic',					'America/Noronha',		false,	'Mid-Atlantic Standard Time',		null), # Fernando de Noronha Time
 			array('(GMT-01:00) Azores',						'Atlantic/Azores',		false,	'Azores Time',				'Azores Summer Time'),
 			array('(GMT-01:00) Cape Verde Islands',					'Atlantic/Cape_Verde',		false,	'Cape Verde Time',			null),
-			array('(GMT) Greenwich Mean Time : Dublin, Edinburgh, Lisbon, London',	'Europe/London',		false,	'Greenwich Mean Time',			'British Summer Time'), # lisbon really does WEST in the summer, but is included here
-			array('(GMT) Casablanca, Monrovia',					'Africa/Casablanca',		false,	'Western European Time',		'Western European Summer Time'),
+			array('(GMT) Dublin, Edinburgh, Lisbon, London',			'Europe/London',		false,	'Greenwich Mean Time',			'British Summer Time'), # lisbon really does WEST in the summer, but is included here
+			array('(GMT) Casablanca',						'Africa/Casablanca',		false,	'Western European Time',		'Western European Summer Time'),
+			array('(GMT) Monrovia, Reykjavik',					'Africa/Monrovia',		false,	'Greenwich Mean Time',			null),
 			array('(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna',	'Europe/Amsterdam',		true,	'Central European Time',		'Central European Summer Time'),
 			array('(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague',	'Europe/Belgrade',		false,	'Central European Time',		'Central European Summer Time'),
 			array('(GMT+01:00) Brussels, Copenhagen, Madrid, Paris',		'Europe/Brussels',		false,	'Central European Time',		'Central European Summer Time'),
 			array('(GMT+01:00) Sarajevo, Skopje, Warsaw, Zagreb',			'Europe/Warsaw',		false,	'Central European Time',		'Central European Summer Time'),
 			array('(GMT+01:00) West Central Africa',				'Africa/Algiers',		false,	'Central European Time',		null),
 			array('(GMT+01:00) Windhoek',						'Africa/Windhoek',		false,	'West Africa Time',			'West Africa Summer Time'),
+			array('(GMT+01:00) Tripoli',						'Africa/Tripoli',		false,	'Central European Time',		'Central European Summer Time'),
 			array('(GMT+02:00) Athens, Bucharest',					'Europe/Athens',		false,	'Eastern European Time',		'Eastern European Summer Time'),
 			array('(GMT+02:00) Beirut',						'Asia/Beirut',			false,	'Eastern European Time',		'Eastern European Summer Time'),
 			array('(GMT+02:00) Cairo',						'Africa/Cairo',			false,	'Eastern European Time',		null),
@@ -82,8 +84,8 @@
 			array('(GMT+04:00) Tbilisi',						'Asia/Tbilisi',			false,	'Georgia Standard Time',		null),
 			array('(GMT+04:00) Yerevan',						'Asia/Yerevan',			false,	'Armenia Time',				'Armenia Summer Time'),
 			array('(GMT+04:30) Kabul',						'Asia/Kabul',			false,	'Afghanistan Time',			null),
-			array('(GMT+05:00) Islamabad, Karachi',					'Asia/Karachi',			true,	'Pakistan Standard Time',		null),
-			array('(GMT+05:00) Tashkent',						'Asia/Tashkent',		false,	'Uzbekistan Time',			null),
+			array('(GMT+05:00) Tashkent, Ashgabat',					'Asia/Tashkent',		true,	'Uzbekistan Time',			null),
+			array('(GMT+05:00) Islamabad, Karachi',					'Asia/Karachi',			false,	'Pakistan Standard Time',		null),
 			array('(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi',		'Asia/Kolkata',			false,	'India Standard Time',			null),
 			array('(GMT+05:30) Sri Jayawardenepura',				'Asia/Colombo',			false,	'ISri Lanka Standard Time',		null), # matches India Standard Time since 2006
 			array('(GMT+05:45) Kathmandu',						'Asia/Katmandu',		false,	'Nepal Time',				null),
