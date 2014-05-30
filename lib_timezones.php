@@ -64,7 +64,7 @@
 			array('(UTC+01:00) Tripoli',						'Africa/Tripoli',		false,	'Central European Time',		'Central European Summer Time'),
 			array('(UTC+02:00) Athens, Bucharest',					'Europe/Athens',		false,	'Eastern European Time',		'Eastern European Summer Time'),
 			array('(UTC+02:00) Beirut',						'Asia/Beirut',			false,	'Eastern European Time',		'Eastern European Summer Time'),
-			array('(UTC+02:00) Cairo',						'Africa/Cairo',			false,	'Eastern European Time',		null),
+			array('(UTC+02:00) Cairo',						'Africa/Cairo',			false,	'Eastern European Time',		'Eastern European Summer Time'),
 			array('(UTC+02:00) Damascus',						'Asia/Damascus',		false,	'Eastern European Time',		'Eastern European Summer Time'),
 			array('(UTC+02:00) Eastern Europe',					'EET',				true,	'Eastern European Time',		'Eastern European Summer Time'),
 			array('(UTC+02:00) Harare, Pretoria',					'Africa/Harare',		false,	'Central Africa Time',			null),
