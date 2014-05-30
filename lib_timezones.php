@@ -73,7 +73,7 @@
 			array('(UTC+02:00) Jerusalem',						'Asia/Jerusalem',		false,	'Israel Standard Time',			'Israel Daylight Time'),
 			array('(UTC+03:00) Amman',						'Asia/Amman',			false,	'Arabia Standard Time',			null),
 			array('(UTC+03:00) Baghdad',						'Asia/Baghdad',			false,	'Arabia Standard Time',			null),
-			array('(UTC+03:00) Kaliningrad, Minsk',					'Europe/Kaliningrad',		false,	'Kaliningrad Time',			null), # has no name on timeanddate.com
+			array('(UTC+03:00) Kaliningrad, Minsk',					'Europe/Kaliningrad',		false,	'Kaliningrad Time',			null), # has no name on timeanddate.com, no DST since 2011
 			array('(UTC+03:00) Kuwait, Riyadh',					'Asia/Kuwait',			true,	'Arabia Standard Time',			null),
 			array('(UTC+03:00) Nairobi',						'Africa/Nairobi',		false,	'East Africa Time',			null),
 			array('(UTC+03:30) Tehran',						'Asia/Tehran',			false,	'Iran Standard Time',			'Iran Daylight Time'),
@@ -101,7 +101,7 @@
 			array('(UTC+08:00) Perth',						'Australia/Perth',		false,	'Australian Western Standard Time',	null),
 			array('(UTC+08:00) Taipei',						'Asia/Taipei',			false,	'Taiwan Standard Time',			null),
 			array('(UTC+08:00) Ulaanbaatar',					'Asia/Ulaanbaatar',		true,	'Ulaanbaatar Time',			null),
-			array('(UTC+09:00) Irkutsk',						'Asia/Irkutsk',			false,	'Irkutsk Time',				'Irkutsk Summer Time'),
+			array('(UTC+09:00) Irkutsk',						'Asia/Irkutsk',			false,	'Irkutsk Time',				'Irkutsk Summer Time'), # no DST since 2011
 			array('(UTC+09:00) Osaka, Sapporo, Tokyo',				'Asia/Tokyo',			true,	'Japan Standard Time',			null),
 			array('(UTC+09:00) Seoul',						'Asia/Seoul',			false,	'Korea Standard Time',			null),
 			array('(UTC+09:30) Adelaide',						'Australia/Adelaide',		false,	'Australian Central Standard Time',	'Australian Central Daylight Time'),
@@ -117,7 +117,7 @@
 			array('(UTC+12:00) Fiji Islands, Kamchatka, Marshall Islands',		'Pacific/Fiji',			false,	'Fiji Time',				'Fiji Summer Time'),
 			array('(UTC+12:00) Magadan',						'Asia/Magadan',			false,	'Magadan Time',				'Magadan Summer Time'),
 			array('(UTC+13:00) Nuku\'alofa',					'Pacific/Tongatapu',		false,	'Tonga Standard Time',			null),
-			array('(UTC+13:00) Samoa',						'Pacific/Apia',			false,	'West Samoa Time',			null),
+			array('(UTC+13:00) Samoa',						'Pacific/Apia',			false,	'West Samoa Time',			null), # DST name is same as non
 		);
 	}
 
