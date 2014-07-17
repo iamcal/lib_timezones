@@ -34,6 +34,7 @@
 			array('(UTC-06:00) Guadalajara, Mexico City, Monterrey',		'America/Mexico_City',		false,	'Central Standard Time',		'Central Daylight Time'),
 			array('(UTC-06:00) Saskatchewan',					'America/Regina',		true,	'Central Standard Time',		'Central Daylight Time'),
 			array('(UTC-05:00) Bogota, Lima, Quito',				'America/Bogota',		false,	'South America Pacific Standard Time',	null), # Colombia Time / Peru Time / Ecuador Time
+			array('(UTC-05:00) Kingston, George Town',				'America/Jamaica',		false,	'Eastern Standard Time',		null),
 			array('(UTC-05:00) Eastern Time (US and Canada)',			'America/New_York',		false,	'Eastern Standard Time',		'Eastern Daylight Time'),
 			array('(UTC-05:00) Indiana (East)',					'America/Indiana/Indianapolis',	true,	'Eastern Standard Time',		'Eastern Daylight Time'),
 			array('(UTC-04:30) Caracas',						'America/Caracas',		false,	'Venezuelan Standard Time',		null),

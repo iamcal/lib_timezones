@@ -87,6 +87,7 @@ var _timezones_list = [
 	["(UTC-06:00) Guadalajara, Mexico City, Monterrey", 'America/Mexico_City'],
 	["(UTC-06:00) Saskatchewan", 'America/Regina'],
 	["(UTC-05:00) Bogota, Lima, Quito", 'America/Bogota'],
+	["(UTC-05:00) Kingston, George Town", 'America/Jamaica'],
 	["(UTC-05:00) Eastern Time (US and Canada)", 'America/New_York'],
 	["(UTC-05:00) Indiana (East)", 'America/Indiana/Indianapolis'],
 	["(UTC-04:30) Caracas", 'America/Caracas'],
