@@ -61,7 +61,7 @@ var _timezones_map = {
 	'360:360':	'Asia/Novosibirsk',
 	'390:390':	'Asia/Rangoon',
 	'480:480':	'Asia/Singapore',
-	'540:480':  'Asia/Ulaanbaatar',
+	'540:480':	'Asia/Ulaanbaatar',
 	'540:540':	'Asia/Tokyo',
 	'600:600':	'Australia/Brisbane',
 	'570:630':	'Australia/Adelaide',
