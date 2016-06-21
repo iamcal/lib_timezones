@@ -5,11 +5,19 @@
 
 	date_default_timezone_set('America/Los_Angeles');
 
-	$summer = date_create();
-	$winter = date_create();
+	$dates = array(
+		array(0,0,0,6,30,2012),
+		array(0,0,0,12,30,2012),
+	);
 
-	date_timestamp_set($summer, gmmktime(0,0,0,6,30,2012));
-	date_timestamp_set($winter, gmmktime(0,0,0,12,30,2012));
+
+
+	$probe_dates = array();
+	foreach ($dates as $d){
+		$date = date_create();
+		date_timestamp_set($date, gmmktime($d[0], $d[1], $d[2], $d[3], $d[4], $d[5]));
+		$probe_dates[] = $date;
+	}
 
 	$zones = timezones_list();
 	$map = array();
@@ -17,19 +25,30 @@
 	foreach ($zones as $row){
 
 		$tz = timezone_open($row[1]);
-		date_timezone_set($summer, $tz);
-		date_timezone_set($winter, $tz);
+		$bits = array();
 
-		$so = date_offset_get($summer) / 60;
-		$wo = date_offset_get($winter) / 60;
+		foreach ($probe_dates as $d){
+			date_timezone_set($d, $tz);
+			$off = date_offset_get($d) / 60;
+			$bits[] = $off;
+		}
 
-		$key = $so.':'.$wo;
+		$key = implode(':', $bits);
+
 		if ($row[2]){
 			$map[$key] = $row[1];
 		}else{
 			if (!array_key_exists($key, $map)) $map[$key] = $row[1];
 		}
 	}
+
+	$per = count($map) / count($zones);
+	$per = round($per * 1000) / 10;
+
+	echo "number of zones in list  : ".count($zones)."\n";
+	echo "number of zones detected : ".count($map)."\n";
+	echo "match rate : {$per}%\n";
+	exit;
 
 
 	$lines = file('timezones.js.template');
