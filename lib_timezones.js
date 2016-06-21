@@ -12,8 +12,8 @@ function timezones_list(){
 
 function timezones_guess(){
 
-	var so = -1 * new Date(Date.UTC(2012, 6, 30, 0, 0, 0, 0)).getTimezoneOffset();
-	var wo = -1 * new Date(Date.UTC(2012, 12, 30, 0, 0, 0, 0)).getTimezoneOffset();
+	var so = -1 * new Date(Date.UTC(2016, 6, 30, 0, 0, 0, 0)).getTimezoneOffset();
+	var wo = -1 * new Date(Date.UTC(2016, 12, 30, 0, 0, 0, 0)).getTimezoneOffset();
 	var key = so + ':' + wo;
 
 	return _timezones_map[key] ? _timezones_map[key] : 'US/Pacific';
@@ -31,7 +31,7 @@ var _timezones_map = {
 	'-300:-360':	'America/Chicago',
 	'-300:-300':	'America/Bogota',
 	'-240:-300':	'America/Indiana/Indianapolis',
-	'-270:-270':	'America/Caracas',
+	'-240:-240':	'America/Caracas',
 	'-240:-180':	'America/Santiago',
 	'-180:-240':	'America/Halifax',
 	'-240:-240':	'America/Manaus',
@@ -52,22 +52,23 @@ var _timezones_map = {
 	'180:180':	'Asia/Kuwait',
 	'240:240':	'Asia/Muscat',
 	'270:210':	'Asia/Tehran',
-	'300:240':	'Asia/Baku',
+	'240:240':	'Asia/Baku',
 	'270:270':	'Asia/Kabul',
 	'300:300':	'Asia/Tashkent',
 	'360:360':	'Asia/Dhaka',
 	'330:330':	'Asia/Kolkata',
 	'345:345':	'Asia/Katmandu',
-	'420:420':	'Asia/Novosibirsk',
+	'360:360':	'Asia/Novosibirsk',
 	'390:390':	'Asia/Rangoon',
-	'480:480':	'Asia/Ulaanbaatar',
+	'480:480':	'Asia/Singapore',
+	'540:480':  'Asia/Ulaanbaatar',
 	'540:540':	'Asia/Tokyo',
 	'600:600':	'Australia/Brisbane',
 	'570:630':	'Australia/Adelaide',
 	'570:570':	'Australia/Darwin',
 	'600:660':	'Australia/Canberra',
-	'720:720':	'Asia/Magadan',
-	'660:660':	'Asia/Vladivostok',
+	'660:660':	'Asia/Magadan',
+	'600:600':	'Asia/Vladivostok',
 	'720:780':	'Pacific/Auckland',
 	'780:780':	'Pacific/Tongatapu',
 	'780:840':	'Pacific/Apia'
