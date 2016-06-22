@@ -22,3 +22,7 @@ function timezones_guess(){
 var _timezones_map = #MAP#;
 
 var _timezones_list = #LIST#;
+
+var _timezones_alternative = #EXACT#;
+
+#BROKEN#
