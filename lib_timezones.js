@@ -24,24 +24,30 @@ function timezones_guess(){
 }
 
 var _try_using_api = function() {
-	var format, timezone;
-    if (typeof Intl === "undefined" || typeof Intl.DateTimeFormat === "undefined") {
-        return;
-    }
+	try {
+		var format, timezone;
+	    if (typeof Intl === "undefined" || typeof Intl.DateTimeFormat === "undefined") {
+	        return;
+	    }
 
-    format = Intl.DateTimeFormat();
+	    format = Intl.DateTimeFormat();
 
-    if (typeof format === "undefined" || typeof format.resolvedOptions === "undefined") {
-        return;
-    }
+	    if (typeof format === "undefined" || typeof format.resolvedOptions === "undefined") {
+	        return;
+	    }
 
-	timezone = format.resolvedOptions().timeZone;
+		timezone = format.resolvedOptions().timeZone;
 
-	// Sometimes the API can return an abbreviation. The only abbreviation we
-	// accept is 'EET', otherwise we want to make sure there is a '/' in the response
-	if (timezone.indexOf("/") > -1 || timezone === 'EET') {
-        return timezone;
-    }
+		// Sometimes the API can return an abbreviation. The only abbreviation we
+		// accept is 'EET', otherwise we want to make sure there is a '/' in the response
+		if (timezone.indexOf("/") > -1 || timezone === 'EET') {
+	        return timezone;
+	    } else {
+			return
+		}
+	} catch {
+		return;
+	}
 };
 
 var _timezones_map = {
