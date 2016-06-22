@@ -3,7 +3,11 @@
 <title>Timezone Guessing Test</title>
 <script src="../lib_timezones.js"></script>
 <script>
+
+var t0 = performance.now();
 var guess = timezones_guess();
+var t1 = performance.now();
+
 var label = '???';
 var list = timezones_list();
 
@@ -11,7 +15,8 @@ for (var i=0; i<list.length; i++){
 	if (list[i][1] == guess) label = list[i][0];
 }
 
-document.write("Guess: "+label+" ("+guess+")");
+document.write("<p>Guess: "+label+" ("+guess+")</p>");
+document.write("<p>Guess took "+(Math.round(t1-t0))+"ms</p>");
 </script>
 </head>
 <body>
