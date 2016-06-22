@@ -11,7 +11,11 @@ function timezones_list(){
 //
 
 function timezones_guess(){
-
+	var api_guess = _try_using_api();
+	if (api_guess) {
+		return api_guess;
+	}
+	
 	var so = -1 * new Date(Date.UTC(2012, 6, 30, 0, 0, 0, 0)).getTimezoneOffset();
 	var wo = -1 * new Date(Date.UTC(2012, 12, 30, 0, 0, 0, 0)).getTimezoneOffset();
 	var key = so + ':' + wo;
@@ -19,6 +23,26 @@ function timezones_guess(){
 	return _timezones_map[key] ? _timezones_map[key] : 'US/Pacific';
 }
 
+var _try_using_api = function() {
+	var format, timezone;
+    if (typeof Intl === "undefined" || typeof Intl.DateTimeFormat === "undefined") {
+        return;
+    }
+
+    format = Intl.DateTimeFormat();
+
+    if (typeof format === "undefined" || typeof format.resolvedOptions === "undefined") {
+        return;
+    }
+
+    timezone = format.resolvedOptions().timeZone;
+
+	// Sometimes the API can return an abbreviation. The only abbreviation we
+	// accept is 'EET', otherwise we want to make sure there is a '/' in the response
+    if (timezone.indexOf("/") > -1 || timezone === 'EET') {
+        return timezone;
+    }
+};
 
 var _timezones_map = {
 	'-660:-660':	'Pacific/Midway',
