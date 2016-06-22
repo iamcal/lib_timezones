@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Key Event Test</title>
+<title>Timezone detection demo</title>
 </head>
 <body>
 
