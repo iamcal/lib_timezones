@@ -80,6 +80,11 @@
 		}
 	}
 
+	$core = array();
+	foreach (timezone_identifiers_list() as $zone_id){
+		$core[$zone_id] = 1;
+	}
+
 	$exact_lines = array();
 	foreach ($exacts as $k => $v){
 		$k = json_encode($k);
@@ -90,7 +95,11 @@
 
 	$broken = "// The follow zone IDs have no mapping to our choice list:\n";
 	foreach ($no_exact as $id){
-		$broken .= "// $id\n";
+		if (isset($core[$id])){
+			$broken .= "// $id\n";
+		}else{
+			$broken .= "// $id (Obsolete)\n";
+		}
 	}
 
 

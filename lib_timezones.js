@@ -46,7 +46,7 @@ function timezones_guess(){
 		return _timezones_map[key];
 	}
 
-	console.log('no match for TZ on key '+key);
+	//console.log('no match for TZ on key '+key);
 
 	return (arguments.length > 0) ? arguments[0] : 'America/Los_Angeles';
 }
@@ -788,15 +788,15 @@ var _timezones_alternative = {
 // America/Noronha
 // Antarctica/Troll
 // Atlantic/South_Georgia
-// Brazil/DeNoronha
-// Etc/GMT+12
-// Etc/GMT+2
-// Etc/GMT+8
-// Etc/GMT+9
+// Brazil/DeNoronha (Obsolete)
+// Etc/GMT+12 (Obsolete)
+// Etc/GMT+2 (Obsolete)
+// Etc/GMT+8 (Obsolete)
+// Etc/GMT+9 (Obsolete)
 // Europe/Chisinau
-// Europe/Tiraspol
+// Europe/Tiraspol (Obsolete)
 // Pacific/Gambier
 // Pacific/Pitcairn
-// SystemV/PST8
-// SystemV/YST9
+// SystemV/PST8 (Obsolete)
+// SystemV/YST9 (Obsolete)
 
