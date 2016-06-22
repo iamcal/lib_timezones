@@ -23,7 +23,7 @@
 	# dump unmatched
 	#
 
-	if (true){
+	if (false){
 
 		$map = build_map($zones, $base_dates);
 
@@ -82,7 +82,7 @@
 	# brute crazy optimizer
 	#
 
-	if (false){
+	if (true){
 
 		$keep_dates = array();
 
@@ -90,9 +90,9 @@
 
 			$best = array();
 
-			for ($i=0; $i<35*365; $i++){
+			for ($i=0; $i<15*365; $i++){
 
-				$d = array(0,0,0,1,1+$i,1980);
+				$d = array(0,0,0,1,1+$i,2000);
 
 				$dates = $keep_dates;
 				$dates[] = $d;

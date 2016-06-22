@@ -38,10 +38,10 @@
 			array('(UTC-06:00) Saskatchewan',					'America/Regina',		true,	'Central Standard Time',		'Central Daylight Time'),
 			array('(UTC-05:00) Bogota, Lima, Quito',				'America/Bogota',		false,	'South America Pacific Standard Time',	null), # Colombia Time / Peru Time / Ecuador Time
 			array('(UTC-05:00) Chetumal',						'America/Cancun',		false,	'Eastern Standard Time',		null),
-			array('(UTC-05:00) Eastern Time (US and Canada)',			'America/New_York',		false,	'Eastern Standard Time',		'Eastern Daylight Time'),
+			array('(UTC-05:00) Eastern Time (US and Canada)',			'America/New_York',		true,	'Eastern Standard Time',		'Eastern Daylight Time'),
 			array('(UTC-05:00) Haiti',						'America/Port-au-Prince',	false,	'Eastern Standard Time',		null),
 			array('(UTC-05:00) Havana',						'America/Havana',		false,	'Cuba Standard Time',			'Cuba Daylight Time'),
-			array('(UTC-05:00) Indiana (East)',					'America/Indiana/Indianapolis',	true,	'Eastern Standard Time',		'Eastern Daylight Time'),
+			array('(UTC-05:00) Indiana (East)',					'America/Indiana/Indianapolis',	false,	'Eastern Standard Time',		'Eastern Daylight Time'),
 			array('(UTC-04:00) Asuncion',						'America/Asuncion',		false,	'Paraguay Time',			'Paraguay Summer Time'),
 			array('(UTC-04:00) Atlantic Time (Canada)',				'America/Halifax',		false,	'Atlantic Standard Time',		'Atlantic Daylight Time'),
 			array('(UTC-04:00) Caracas',						'America/Caracas',		false,	'Venezuelan Standard Time',		null),
