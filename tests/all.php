@@ -13,6 +13,9 @@
 	}
 
 	foreach (timezone_identifiers_list(DateTimeZone::ALL_WITH_BC) as $zone_id){
+		if ($zone_id == 'leap-seconds.list') continue;
+		if ($zone_id == 'localtime') continue;
+
 
 		list($off, $base, $sum) = get_tz_info($zone_id);
 
@@ -47,7 +50,7 @@
 		#echo "  {$num} : ".implode(', ', $sames[$k])."\n\n";
 
 		foreach ($sames[$k] as $zone){
-			if ($core[$zone]){
+			if (isset($core[$zone])){
 				echo "  $zone\n";
 			}else{
 				echo "  $zone (Obsolete)\n";
