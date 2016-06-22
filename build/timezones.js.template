@@ -12,10 +12,13 @@ function timezones_list(){
 
 function timezones_guess(){
 
-	var so = -1 * new Date(Date.UTC(2012, 6, 30, 0, 0, 0, 0)).getTimezoneOffset();
-	var wo = -1 * new Date(Date.UTC(2012, 12, 30, 0, 0, 0, 0)).getTimezoneOffset();
-	var key = so + ':' + wo;
+	var key_parts = [];
+#DATES#
+	var key = key_parts.join(':');
 
 	return _timezones_map[key] ? _timezones_map[key] : 'US/Pacific';
 }
 
+var _timezones_map = #MAP#;
+
+var _timezones_list = #LIST#;
