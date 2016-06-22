@@ -3,7 +3,15 @@
 <title>Timezone Guessing Test</title>
 <script src="../lib_timezones.js"></script>
 <script>
-document.write("Guess: "+timezones_guess());
+var guess = timezones_guess();
+var label = '???';
+var list = timezones_list();
+
+for (var i=0; i<list.length; i++){
+	if (list[i][1] == guess) label = list[i][0];
+}
+
+document.write("Guess: "+label+" ("+guess+")");
 </script>
 </head>
 <body>
