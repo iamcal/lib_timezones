@@ -164,7 +164,11 @@
 		return null;
 	}
 
-	function timezones_label($id){
+	#
+	# Retrieve the proper label of a timezone, at timestamp $ts (default to now).
+	#
+
+	function timezones_label($id, $ts = false){
 
 		$row =& $GLOBALS['_timezones_label_map'][$id];
 
@@ -173,7 +177,7 @@
 			if ($row[4]){
 
 				date_default_timezone_set($id);
-				$is_dst = date('I');
+				$is_dst = $ts ? date('I', $ts) : date('I');
 				date_default_timezone_set($GLOBALS['cfg']['our_tz']);
 
 				$row['lbl'] = $is_dst ? $row[4] : $row[3];
