@@ -1,22 +1,6 @@
 <?php
 	include('lib.php');
 
-	$zones = timezones_list();
-
-	$base_dates = array(
-		array(0,0,0,12,10,2007),
-		array(0,0,0,04,03,2000),
-		array(0,0,0,03,30,2008),
-		array(0,0,0,03,26,2012),
-		array(0,0,0,09,22,2004),
-		array(0,0,0,10,26,2014),
-		array(0,0,0,10,26,2008),
-		array(0,0,0,10,29,2000),
-		array(0,0,0,10,15,2001),
-		array(0,0,0,11,10,2012),
-		array(0,0,0,03,28,2010),
-	);
-
 
 	#
 	# build our output blocks
