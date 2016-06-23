@@ -27,10 +27,7 @@ function timezones_guess(){
 	}
 
 	// use auto-detection via probe dates
-	var key_parts = [];
-#DATES#
-	var key = key_parts.join(':');
-
+	var key = _timezones_build_probe_key();
 	if (_timezones_map[key]){
 		return _timezones_map[key];
 	}
@@ -40,7 +37,7 @@ function timezones_guess(){
 	return (arguments.length > 0) ? arguments[0] : 'America/Los_Angeles';
 }
 
-var _timezones_try_using_api = function() {
+var _timezones_try_using_api = function(){
 	try {
 		if (typeof Intl === "undefined" || typeof Intl.DateTimeFormat === "undefined"){
 			return;
@@ -60,6 +57,16 @@ var _timezones_try_using_api = function() {
 		return;
 	}
 };
+
+var _timezones_build_probe_key = function(){
+
+	var key_parts = [];
+#DATES#
+	var key = key_parts.join(':');
+
+	return key;
+}
+
 
 var _timezones_map = #MAP#;
 

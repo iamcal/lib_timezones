@@ -27,20 +27,7 @@ function timezones_guess(){
 	}
 
 	// use auto-detection via probe dates
-	var key_parts = [];
-	key_parts.push(-1 * new Date(Date.UTC(2015, 9, 22, 0, 0, 0, 0)).getTimezoneOffset());
-	key_parts.push(-1 * new Date(Date.UTC(2011, 11, 7, 0, 0, 0, 0)).getTimezoneOffset());
-	key_parts.push(-1 * new Date(Date.UTC(2002, 4, 7, 0, 0, 0, 0)).getTimezoneOffset());
-	key_parts.push(-1 * new Date(Date.UTC(2008, 10, 27, 0, 0, 0, 0)).getTimezoneOffset());
-	key_parts.push(-1 * new Date(Date.UTC(2004, 10, 3, 0, 0, 0, 0)).getTimezoneOffset());
-	key_parts.push(-1 * new Date(Date.UTC(2016, 3, 27, 0, 0, 0, 0)).getTimezoneOffset());
-	key_parts.push(-1 * new Date(Date.UTC(2001, 10, 28, 0, 0, 0, 0)).getTimezoneOffset());
-	key_parts.push(-1 * new Date(Date.UTC(2010, 4, 30, 0, 0, 0, 0)).getTimezoneOffset());
-	key_parts.push(-1 * new Date(Date.UTC(2012, 11, 10, 0, 0, 0, 0)).getTimezoneOffset());
-	key_parts.push(-1 * new Date(Date.UTC(2015, 11, 2, 0, 0, 0, 0)).getTimezoneOffset());
-
-	var key = key_parts.join(':');
-
+	var key = _timezones_build_probe_key();
 	if (_timezones_map[key]){
 		return _timezones_map[key];
 	}
@@ -50,7 +37,7 @@ function timezones_guess(){
 	return (arguments.length > 0) ? arguments[0] : 'America/Los_Angeles';
 }
 
-var _timezones_try_using_api = function() {
+var _timezones_try_using_api = function(){
 	try {
 		if (typeof Intl === "undefined" || typeof Intl.DateTimeFormat === "undefined"){
 			return;
@@ -70,6 +57,26 @@ var _timezones_try_using_api = function() {
 		return;
 	}
 };
+
+var _timezones_build_probe_key = function(){
+
+	var key_parts = [];
+	key_parts.push(-1 * new Date(Date.UTC(2015, 9, 22, 0, 0, 0, 0)).getTimezoneOffset());
+	key_parts.push(-1 * new Date(Date.UTC(2011, 11, 7, 0, 0, 0, 0)).getTimezoneOffset());
+	key_parts.push(-1 * new Date(Date.UTC(2002, 4, 7, 0, 0, 0, 0)).getTimezoneOffset());
+	key_parts.push(-1 * new Date(Date.UTC(2008, 10, 27, 0, 0, 0, 0)).getTimezoneOffset());
+	key_parts.push(-1 * new Date(Date.UTC(2004, 10, 3, 0, 0, 0, 0)).getTimezoneOffset());
+	key_parts.push(-1 * new Date(Date.UTC(2016, 3, 27, 0, 0, 0, 0)).getTimezoneOffset());
+	key_parts.push(-1 * new Date(Date.UTC(2001, 10, 28, 0, 0, 0, 0)).getTimezoneOffset());
+	key_parts.push(-1 * new Date(Date.UTC(2010, 4, 30, 0, 0, 0, 0)).getTimezoneOffset());
+	key_parts.push(-1 * new Date(Date.UTC(2012, 11, 10, 0, 0, 0, 0)).getTimezoneOffset());
+	key_parts.push(-1 * new Date(Date.UTC(2015, 11, 2, 0, 0, 0, 0)).getTimezoneOffset());
+
+	var key = key_parts.join(':');
+
+	return key;
+}
+
 
 var _timezones_map = {
 	'-660:-660:-660:-660:-660:-660:-660:-660:-660:-660':	'Pacific/Midway',
