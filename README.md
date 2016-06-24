@@ -46,6 +46,8 @@ Once you have a timezone ID, you can switch to it very simply:
 
 ## Using this in JavaScript
 
+[![Build Status](https://travis-ci.org/iamcal/lib_timezones.svg)](https://travis-ci.org/iamcal/lib_timezones) [![Coverage Status](https://coveralls.io/repos/github/iamcal/lib_timezones/badge.svg?branch=master)](https://coveralls.io/github/iamcal/lib_timezones?branch=master)
+
 The JavaScript version of this data is available in `lib_timezones.js`, which also exports
 a global function called `timezones_list()` in the same format.
 
