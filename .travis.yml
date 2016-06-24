@@ -3,7 +3,6 @@ node_js:
   - '0.10'
 before_script:
   - pecl install timezonedb
-  - php build/version.php
   - npm install
   - bower install
 script:
