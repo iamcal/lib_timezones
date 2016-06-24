@@ -12,8 +12,8 @@ you'll need to get a list of timezones from somewhere. These are some bad ways t
 *  GMT offset plus daylight savings toggle. Daylight savings starts and ends
    at different times in different places, and offsets the time by different
    amounts.
-*  List the `zone.tab` zones. There are currently 548 of these and they are mostly 
-   incomprehensible to humans.
+*  List the `zone.tab` zones. There are currently 589 of these (as of IANA tzdata v.2016e)
+   and they are mostly incomprehensible to humans.
 *  Give up.
 
 That's where this library comes in. It contains a list of sensible, common, timezones
