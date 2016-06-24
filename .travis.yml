@@ -7,4 +7,5 @@ before_script:
   - bower install
 script:
   - grunt
+  - cat lib/lib_tinezones.js
   - grunt coveralls
