@@ -1,5 +1,5 @@
 <?php
-	include('lib.php');
+	include(dirname(__FILE__).'/lib.php');
 
 
 	#
@@ -91,7 +91,7 @@
 	# output
 	#
 
-	$template = file_get_contents('timezones.js.template');
+	$template = file_get_contents(dirname(__FILE__).'/timezones.js.template');
 
 	$template = str_replace(array(
 		'#DATES#',

@@ -1,5 +1,5 @@
 <?php
-	include('../lib_timezones.php');
+	include(dirname(__FILE__).'/../lib/lib_timezones.php');
 
 	date_default_timezone_set('America/Los_Angeles');
 

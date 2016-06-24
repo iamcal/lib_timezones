@@ -1,0 +1,40 @@
+{
+  "name": "lib_timezones",
+  "version": "1.0.0",
+  "description": "A JS timezone detector",
+  "main": "lib/lib_timezones.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "grunt": "~1.0.1",
+    "grunt-contrib-uglify": "~1.0.1",
+    "grunt-karma": "~0.12.2",
+    "grunt-karma-coveralls": "^2.5.3",
+    "grunt-shell": "^1.1.2",
+    "jasmine-core": "~2.4.1",
+    "karma": "~0.13.22",
+    "karma-chrome-launcher": "~0.2.0",
+    "karma-coverage": "~0.5.5",
+    "karma-jasmine": "~0.3.5",
+    "karma-phantomjs-launcher": "~1.0.0",
+    "karma-story-reporter": "^0.3.1",
+    "phantomjs-prebuilt": "~2.1.7"
+  },
+  "scripts": {
+    "test": "grunt karma"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/iamcal/lib_timezones.git"
+  },
+  "keywords": [
+    "timezones"
+  ],
+  "author": "Cal Henderson <cal@iamcal.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iamcal/lib_timezones/issues"
+  },
+  "homepage": "https://timezone.help"
+}
