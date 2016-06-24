@@ -13,8 +13,6 @@ function timezones_guess(){
 	return ret; //.zoneId;
 }
 
-"use strict";
-
 ;(function() {
 
 	var root = this;
