@@ -70,6 +70,7 @@
 	}
 
 	$exact_lines = array();
+	ksort($exacts);
 	foreach ($exacts as $k => $v){
 		$k = json_encode($k);
 		$v = json_encode($v);
