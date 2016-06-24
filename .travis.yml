@@ -4,11 +4,9 @@ node_js:
 before_install:
   - npm install -g grunt-cli
   - sudo apt-get -qq update
-  - sudo apt-get install -y tzdata php5 php5-dev php-pear
-  - sudo pecl install timezonedb
-  - echo "extension=timezonedb.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
-  - php build/version.php
 before_script:
+  - pecl install timezonedb
+  - php build/version.php
   - npm install
   - npm install -g bower
   - bower install
