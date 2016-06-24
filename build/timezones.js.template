@@ -10,7 +10,7 @@ function timezones_guess(){
 	var opts = {};
 	if (arguments.length > 0) opts.default = arguments[0];
 	var ret = tz.detect(opts);
-	return ret; //.zoneId;
+	return ret.zoneId;
 }
 
 ;(function() {
@@ -29,51 +29,81 @@ function timezones_guess(){
 
 		self.detect = function(opts){
 
-			var api_guess = _try_using_api();
+			var out = {
+				'zoneId' : 'America/Los_Angeles',
+				'method' : 'gave_up',
+			};
+
+			if (opts && opts.default){
+				out.zoneId = opts.default;
+				out.method = 'default';
+			}
+
+
+			out.intl = _try_using_api();
+			var api_guess = out.intl.zoneId;
+
 			if (api_guess){
 				// is this one of our choices?
 				for (var i in _map){
 					if (_map[i] == api_guess){
-						return api_guess;
+						out.zoneId = api_guess;
+						out.method = 'intlapi_exact';
+						return out;
 					}
 				}
 				// does it map directly to one of our choices?
 				if (_alternatives[api_guess]){
-					return _alternatives[api_guess];
+					out.zoneId = _alternatives[api_guess];
+					out.method = 'intl_api_equivalent';
+					return out;
 				}
 			}
 
 			// use auto-detection via probe dates
 			var key = _build_probe_key();
 			if (_map[key]){
-				return _map[key];
+				out.zoneId = _map[key];
+				out.method = 'date_probe';
+				out.probeKey = key;
+				return out;
 			}
 
 			//console.log('no match for TZ on key '+key);
 
-			if (opts && opts.default) return opts.default;
-			return 'America/Los_Angeles';
+			return out;
 		}
 
 		var _try_using_api = function(){
+
+			var out = {
+				'zoneId'	: null,
+				'hasIntl'	: false,
+				'hasDateTime'	: false,
+				'hasOptions'	: false,
+			};
+
 			try {
-				if (typeof Intl === "undefined" || typeof Intl.DateTimeFormat === "undefined"){
-					return;
-				}
+				if (typeof Intl === "undefined") return out;
 
+				out.hasIntl = true;
+
+				if (typeof Intl.DateTimeFormat === "undefined") return out;
 				var format = Intl.DateTimeFormat();
+				if (typeof format === "undefined") return out;
 
-				if (typeof format === "undefined" || typeof format.resolvedOptions === "undefined"){
-					return;
-				}
+				out.hasDateTime = true;
 
-				// Sometimes the API can return an abbreviation. Since we know how to convert most
-				// abbreviations, just return it and let the caller convert or ignore.
-				return format.resolvedOptions().timeZone;
+				if (typeof format.resolvedOptions === "undefined") return out;
+
+				out.hasOptions = true;
+				out.zoneId = format.resolvedOptions().timeZone;
 
 			}catch (e){
-				return;
+				return out;
 			}
+
+			return out;
 		};
 
 		var _build_probe_key = function(){
