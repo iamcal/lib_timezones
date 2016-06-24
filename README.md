@@ -1,5 +1,7 @@
 # Sensible Timezone Selection
 
+[![Build Status](https://travis-ci.org/iamcal/lib_timezones.svg)](https://travis-ci.org/iamcal/lib_timezones) [![Coverage Status](https://coveralls.io/repos/github/iamcal/lib_timezones/badge.svg?branch=master)](https://coveralls.io/github/iamcal/lib_timezones?branch=master)
+
 If the software you're building requires that users select their timezone, then 
 you'll need to get a list of timezones from somewhere. These are some bad ways to do it:
 
@@ -20,7 +22,7 @@ the choices and store the `zone.tab` ID in your database. You can then use the I
 directly for setting the zone when displaying dates for your user.
 
 
-## Using this in PHP
+## Usage - Selecting a Timezone from PHP
 
 Since the library is written in PHP, this is easiest:
 
@@ -44,19 +46,19 @@ Once you have a timezone ID, you can switch to it very simply:
     date_default_timezone_set($id);
 
 
-## Using this in JavaScript
-
-[![Build Status](https://travis-ci.org/iamcal/lib_timezones.svg)](https://travis-ci.org/iamcal/lib_timezones) [![Coverage Status](https://coveralls.io/repos/github/iamcal/lib_timezones/badge.svg?branch=master)](https://coveralls.io/github/iamcal/lib_timezones?branch=master)
+## Usage - Auto-detecting a Timezone from JavaScript
 
 The JavaScript version of this data is available in `lib_timezones.js`, which also exports
-a global function called `timezones_list()` in the same format.
+a global function called `timezones_list()` in the same format as the PHP library.
 
 Detecting the actual timezone (rather than just the current offset from GMT) is a pain in 
 JavaScript. The JS library contains a function (`timezones_guess()`) that returns a best 
 guess at the local timezone, as a `zone.tab` identifier.
 
+    var timezone = timezones_guess();
 
-## Using this in other languages
+
+## Usage in other languages
 
 While the main library is written in PHP, exporting it in a format usable in other languages 
 is trivial. If you'd like the data in a particular format, please send a pull request or open
