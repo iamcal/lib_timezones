@@ -39,8 +39,13 @@
 		$tz = timezone_open($zone_id);
 		if ($tz){
 			$trans = timezone_transitions_get($tz, $from, $to);
-			foreach ($trans as $k => $v){
-				unset($trans[$k]['abbr']);
+			if ($trans === false){
+				$STDERR = fopen('php://stderr', 'w+');
+				fwrite($STDERR, "ERROR: failed to get transition data for zone {$zone_id}\n");
+			}else{
+				foreach ($trans as $k => $v){
+					unset($trans[$k]['abbr']);
+				}
 			}
 		}else{
 			$STDERR = fopen('php://stderr', 'w+');
