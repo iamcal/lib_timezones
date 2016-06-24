@@ -37,9 +37,15 @@
 		if ($zone_id == 'localtime') continue;
 
 		$tz = timezone_open($zone_id);
-		$trans = timezone_transitions_get($tz, $from, $to);
-		foreach ($trans as $k => $v){
-			unset($trans[$k]['abbr']);
+		if ($tz){
+			$trans = timezone_transitions_get($tz, $from, $to);
+			foreach ($trans as $k => $v){
+				unset($trans[$k]['abbr']);
+			}
+		}else{
+			$STDERR = fopen('php://stderr', 'w+');
+			fwrite($STDERR, "ERROR: unable to open zone {$zone_id}\n");
+			$trans = array();
 		}
 
 		$hash = md5(serialize($trans));
