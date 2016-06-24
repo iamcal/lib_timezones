@@ -1,0 +1,11 @@
+language: node
+node_js:
+  - '0.10'
+before_script:
+  - pecl install timezonedb
+  - npm install
+  - bower install
+script:
+  - grunt
+  - cat lib/lib_timezones.js
+  - grunt coveralls

@@ -1,0 +1,30 @@
+{
+  "name": "lib_timezones",
+  "description": "A JS timezone detector",
+  "authors": [
+    "Cal Henderson <cal@iamcal.com>"
+  ],
+  "keywords": [
+    "timezones"
+  ],
+  "main": "lib/lib_timezones.js",
+  "ignore": [
+    "build",
+    "bower_components",
+    "**/.*",
+    "node_modules",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iamcal/lib_timezones.git"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/iamcal/lib_timezones",
+  "moduleType": [
+    "globals"
+  ]
+}

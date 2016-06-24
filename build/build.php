@@ -1,5 +1,5 @@
 <?php
-	include('lib.php');
+	include(dirname(__FILE__).'/lib.php');
 
 
 	#
@@ -37,9 +37,20 @@
 		if ($zone_id == 'localtime') continue;
 
 		$tz = timezone_open($zone_id);
-		$trans = timezone_transitions_get($tz, $from, $to);
-		foreach ($trans as $k => $v){
-			unset($trans[$k]['abbr']);
+		if ($tz){
+			$trans = timezone_transitions_get($tz, $from, $to);
+			if ($trans === false){
+				$STDERR = fopen('php://stderr', 'w+');
+				fwrite($STDERR, "ERROR: failed to get transition data for zone {$zone_id}\n");
+			}else{
+				foreach ($trans as $k => $v){
+					unset($trans[$k]['abbr']);
+				}
+			}
+		}else{
+			$STDERR = fopen('php://stderr', 'w+');
+			fwrite($STDERR, "ERROR: unable to open zone {$zone_id}\n");
+			$trans = array();
 		}
 
 		$hash = md5(serialize($trans));
@@ -70,6 +81,7 @@
 	}
 
 	$exact_lines = array();
+	ksort($exacts);
 	foreach ($exacts as $k => $v){
 		$k = json_encode($k);
 		$v = json_encode($v);
@@ -91,7 +103,7 @@
 	# output
 	#
 
-	$template = file_get_contents('timezones.js.template');
+	$template = file_get_contents(dirname(__FILE__).'/timezones.js.template');
 
 	$template = str_replace(array(
 		'#DATES#',

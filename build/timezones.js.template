@@ -1,77 +1,114 @@
+"use strict";
 
 function timezones_list(){
-
-	return _timezones_list;
+	var tz = new TimezoneDetector();
+	return tz.getList();
 }
-
-
-//
-// technique based on this article:
-// http://blog.redfin.com/devblog/2007/08/getting_the_time_zone_from_a_web_browser.html
-//
 
 function timezones_guess(){
+	var tz = new TimezoneDetector();
+	var opts = {};
+	if (arguments.length > 0) opts.default = arguments[0];
+	var ret = tz.detect(opts);
+	return ret; //.zoneId;
+}
 
-	var api_guess = _timezones_try_using_api();
-	if (api_guess){
-		// is this one of our choices?
-		for (var i in _timezones_map){
-			if (_timezones_map[i] == api_guess){
-				return api_guess;
+;(function() {
+
+	var root = this;
+	var previous_detector = root.TimezoneDetector;
+
+	var tz = function(){
+
+		var self = this;
+
+		self.getList = function(){
+
+			return _list;
+		}
+
+		self.detect = function(opts){
+
+			var api_guess = _try_using_api();
+			if (api_guess){
+				// is this one of our choices?
+				for (var i in _map){
+					if (_map[i] == api_guess){
+						return api_guess;
+					}
+				}
+				// does it map directly to one of our choices?
+				if (_alternatives[api_guess]){
+					return _alternatives[api_guess];
+				}
 			}
-		}
-		// does it map directly to one of our choices?
-		if (_timezones_alternative[api_guess]){
-			return _timezones_alternative[api_guess];
-		}
-	}
 
-	// use auto-detection via probe dates
-	var key = _timezones_build_probe_key();
-	if (_timezones_map[key]){
-		return _timezones_map[key];
-	}
+			// use auto-detection via probe dates
+			var key = _build_probe_key();
+			if (_map[key]){
+				return _map[key];
+			}
 
-	//console.log('no match for TZ on key '+key);
+			//console.log('no match for TZ on key '+key);
 
-	return (arguments.length > 0) ? arguments[0] : 'America/Los_Angeles';
-}
-
-var _timezones_try_using_api = function(){
-	try {
-		if (typeof Intl === "undefined" || typeof Intl.DateTimeFormat === "undefined"){
-			return;
+			if (opts && opts.default) return opts.default;
+			return 'America/Los_Angeles';
 		}
 
-		var format = Intl.DateTimeFormat();
+		var _try_using_api = function(){
+			try {
+				if (typeof Intl === "undefined" || typeof Intl.DateTimeFormat === "undefined"){
+					return;
+				}
 
-		if (typeof format === "undefined" || typeof format.resolvedOptions === "undefined"){
-			return;
-		}
+				var format = Intl.DateTimeFormat();
 
-		// Sometimes the API can return an abbreviation. Since we know how to convert most
-		// abbreviations, just return it and let the caller convert or ignore.
-		return format.resolvedOptions().timeZone;
+				if (typeof format === "undefined" || typeof format.resolvedOptions === "undefined"){
+					return;
+				}
 
-	}catch (e){
-		return;
-	}
-};
+				// Sometimes the API can return an abbreviation. Since we know how to convert most
+				// abbreviations, just return it and let the caller convert or ignore.
+				return format.resolvedOptions().timeZone;
 
-var _timezones_build_probe_key = function(){
+			}catch (e){
+				return;
+			}
+		};
 
-	var key_parts = [];
+		var _build_probe_key = function(){
+
+			var key_parts = [];
 #DATES#
-	var key = key_parts.join(':');
+			var key = key_parts.join(':');
 
-	return key;
-}
+			return key;
+		}
 
 
-var _timezones_map = #MAP#;
+		var _map = #MAP#;
 
-var _timezones_list = #LIST#;
+		var _list = #LIST#;
 
-var _timezones_alternative = #EXACT#;
+		var _alternatives = #EXACT#;
 
-#BROKEN#
+		#BROKEN#
+
+		return self;
+	}
+
+	// export
+	if (typeof exports !== 'undefined'){
+		if (typeof module !== 'undefined' && module.exports){
+			exports = module.exports = tz;
+		}
+		exports.TimezoneDetector = tz;
+	}else if (typeof define === 'function' && define.amd){
+		define(function() { return tz; })
+	}else{
+		root.TimezoneDetector = tz;
+	}
+
+}).call(function(){
+	return this || (typeof window !== 'undefined' ? window : global);
+}());
