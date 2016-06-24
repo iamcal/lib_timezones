@@ -6,6 +6,7 @@ before_install:
   - sudo apt-get -qq update
   - sudo apt-get install -y tzdata php5 php5-dev php-pear
   - sudo pecl install timezonedb
+  - php build/version.php
 before_script:
   - npm install
   - npm install -g bower
