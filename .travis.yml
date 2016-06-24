@@ -1,17 +1,11 @@
 language: node
 node_js:
   - '0.10'
-before_install:
-  - npm install -g grunt-cli
-  - sudo apt-get -qq update
 before_script:
   - pecl install timezonedb
   - php build/version.php
   - npm install
-  - npm install -g bower
   - bower install
-  - sudo apt-get update -qq
-  - sudo apt-get install -y php5-cli
 script:
   - grunt
   - grunt coveralls
