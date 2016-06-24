@@ -4,7 +4,7 @@ node_js:
 before_install:
   - npm install -g grunt-cli
   - sudo apt-get -qq update
-  - sudo apt-get install -y tzdata php5
+  - sudo apt-get install -y tzdata php5 php5-dev php-pear
   - sudo pecl install timezonedb
 before_script:
   - npm install
