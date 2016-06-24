@@ -6,7 +6,7 @@ before_install:
   - sudo apt-get -qq update
   - sudo apt-get install -y tzdata php5 php5-dev php-pear
   - sudo pecl install timezonedb
-  - sudo echo "extension=timezonedb.so" >> /etc/php5/cli/php.ini
+  - echo "extension=timezonedb.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
   - php build/version.php
 before_script:
   - npm install
