@@ -45,12 +45,18 @@ function timezones_guess(){
 
 			if (api_guess){
 				// is this one of our choices?
-				for (var i in _map){
-					if (_map[i] == api_guess){
+				for (var i=0; i<_list.length; i++){
+					if (_list[i][1] == api_guess){
 						out.zoneId = api_guess;
 						out.method = 'intlapi_exact';
 						return out;
 					}
+				}
+				// does it map to a manual equivalent?
+				if (_manual_alts[api_guess]){
+					out.zoneId = _manual_alts[api_guess];
+					out.method = 'intl_api_manual';
+					return out;
 				}
 				// does it map directly to one of our choices?
 				if (_alternatives[api_guess]){
@@ -61,11 +67,11 @@ function timezones_guess(){
 			}
 
 			// use auto-detection via probe dates
-			var key = _build_probe_key();
-			if (_map[key]){
-				out.zoneId = _map[key];
+			out.probe = _try_using_probe();
+
+			if (out.probe.zoneId){
+				out.zoneId = out.probe.zoneId;
 				out.method = 'date_probe';
-				out.probeKey = key;
 				return out;
 			}
 
@@ -106,19 +112,61 @@ function timezones_guess(){
 			return out;
 		};
 
-		var _build_probe_key = function(){
+		var _try_using_probe = function(){
 
 			var key_parts = [];
 #DATES#
-			var key = key_parts.join(':');
 
-			return key;
+			var key = '';
+
+			for (var i=1; i<=key_parts.length; i++){
+
+				key = key_parts.slice(0,i).join(':');
+				if (_map[key]){
+					return {
+						'zoneId'	: _map[key],
+						'probeKey'	: key,
+					};
+				}
+			}
+
+			return {
+				'zoneId'	: null,
+				'probeKey'	: key,
+			};
 		}
 
 
 		var _map = #MAP#;
 
 		var _list = #LIST#;
+
+		// mappings of zones that Windows returns, but we don't have in our master list.
+		// we explicitly list them here because we can't always do an automated mapping
+		// of their equivilence into `_alternatives`.
+		var _manual_alts = {
+			"America/Guatemala" : "America/Belize",
+			"America/Indianapolis" : "America/Indiana/Indianapolis",
+			"America/La_Paz" : "America/Manaus",
+			"UTC" : "Africa/Monrovia",
+			"Atlantic/Reykjavik" : "Africa/Monrovia",
+			"Europe/Berlin" : "Europe/Amsterdam",
+			"Europe/Budapest" : "Europe/Belgrade",
+			"Europe/Paris" : "Europe/Brussels",
+			"Africa/Lagos" : "Africa/Algiers",
+			"Europe/Bucharest" : "Europe/Athens",
+			"Africa/Johannesburg" : "Africa/Harare",
+			"Europe/Kiev" : "Europe/Helsinki",
+			"Europe/Istanbul" : "Asia/Istanbul",
+			"Asia/Riyadh" : "Asia/Kuwait",
+			"Asia/Dubai" : "Asia/Muscat",
+			"Asia/Calcutta" : "Asia/Kolkata",
+			"Asia/Shanghai" : "Asia/Chongqing",
+			"Asia/Singapore" : "Asia/Kuala_Lumpur",
+			"Australia/Sydney" : "Australia/Canberra",
+			"Pacific/Port_Moresby" : "Pacific/Guam",
+			"Asia/Kamchatka" : "Asia/Anadyr"
+		};
 
 		var _alternatives = #EXACT#;
 
