@@ -6,16 +6,19 @@
 	$zones = timezones_list();
 
 	$base_dates = array(
-		array(0,0,0,9,22,2015),
-		array(0,0,0,11,7,2011),
-		array(0,0,0,4,7,2002),
 		array(0,0,0,10,27,2008),
-		array(0,0,0,10,3,2004),
-		array(0,0,0,3,27,2016),
-		array(0,0,0,10,28,2001),
 		array(0,0,0,4,30,2010),
+
+		array(0,0,0,10,28,2001),
+		array(0,0,0,4,7,2002),
+		array(0,0,0,10,3,2004),
+
+
+		array(0,0,0,11,7,2011),
 		array(0,0,0,11,10,2012),
+		array(0,0,0,9,22,2015),
 		array(0,0,0,11,2,2015),
+		array(0,0,0,3,27,2016),
 	);
 
 
@@ -64,4 +67,32 @@
 		}
 
 		return $map;
+	}
+
+
+	function shrink_map($map){
+
+		$out = array();
+
+		foreach ($map as $k => $v){
+			$bits = explode(':', $k);
+			$key = $k;
+			while (is_unique($key, array_keys($map))){
+				$keep_key = $key;
+				array_pop($bits);
+				$key = implode(':', $bits);
+			}
+			$out[$keep_key] = $v;
+		}
+
+		return $out;
+	}
+
+	function is_unique($key, $keys){
+		$num = 0;
+		$l = strlen($key);
+		foreach ($keys as $k){
+			if (substr($k, 0, $l) == $key) $num++;
+		}
+		return $num <= 1;
 	}

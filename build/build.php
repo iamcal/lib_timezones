@@ -7,20 +7,21 @@
 	#
 
 	$map = build_map($zones, $base_dates);
+	$map = shrink_map($map);
 
 
 	$dates = '';
 	foreach ($base_dates as $d){
-		$dates .= "\tkey_parts.push(-1 * new Date(Date.UTC({$d[5]}, {$d[3]}, {$d[4]}, {$d[0]}, {$d[1]}, {$d[2]}, 0)).getTimezoneOffset());\n";
+		$dates .= "\t\t\tkey_parts.push(-1 * new Date(Date.UTC({$d[5]}, {$d[3]}, {$d[4]}, {$d[0]}, {$d[1]}, {$d[2]}, 0)).getTimezoneOffset());\n";
 	}
 
 	$map_lines = array();
-	foreach ($map as $k => $v) $map_lines[] = "\t'$k':\t'{$v[0]}'";
+	foreach ($map as $k => $v) $map_lines[] = "\t\t'$k':\t'{$v[0]}'";
 	$map = "{\n".implode(",\n", $map_lines)."\n}";
 
 
 	$zone_lines = array();
-	foreach ($zones as $row) $zone_lines[] = "\t[\"{$row[0]}\", '{$row[1]}']";
+	foreach ($zones as $row) $zone_lines[] = "\t\t[\"{$row[0]}\", '{$row[1]}']";
 	$list = "[\n".implode(",\n", $zone_lines)."\n]";
 
 
