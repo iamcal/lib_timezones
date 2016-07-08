@@ -37,7 +37,10 @@ module.exports = function(grunt) {
     },
     shell: {
       compile: {
-        command: 'php build/build.php > lib/lib_timezones.js'
+        command: [
+		'php build/build_php.php > lib/lib_timezones.php',
+		'php build/build_js.php > lib/lib_timezones.js'
+	].join('&&')
       }
     }
   });
