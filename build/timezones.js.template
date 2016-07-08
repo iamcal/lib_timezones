@@ -117,22 +117,21 @@ function timezones_guess(){
 			var key_parts = [];
 #DATES#
 
-			var key = '';
-
 			for (var i=1; i<=key_parts.length; i++){
 
-				key = key_parts.slice(0,i).join(':');
+				var key = key_parts.slice(0,i).join(':');
 				if (_map[key]){
 					return {
 						'zoneId'	: _map[key],
 						'probeKey'	: key,
+						'fullKey'	: key_parts.join(':')
 					};
 				}
 			}
 
 			return {
 				'zoneId'	: null,
-				'probeKey'	: key,
+				'fullKey'	: key_parts.join(':')
 			};
 		}
 
