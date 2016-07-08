@@ -16,13 +16,13 @@
 	}
 
 	$map_lines = array();
-	foreach ($map as $k => $v) $map_lines[] = "\t\t'$k':\t'{$v[0]}'";
-	$map = "{\n".implode(",\n", $map_lines)."\n}";
+	foreach ($map as $k => $v) $map_lines[] = "\t\t\t'$k':\t'{$v[0]}'";
+	$map = "{\n".implode(",\n", $map_lines)."\n\t\t}";
 
 
 	$zone_lines = array();
-	foreach ($zones as $row) $zone_lines[] = "\t\t[\"{$row[0]}\", '{$row[1]}']";
-	$list = "[\n".implode(",\n", $zone_lines)."\n]";
+	foreach ($zones as $row) $zone_lines[] = "\t\t\t[\"{$row[0]}\", '{$row[1]}']";
+	$list = "[\n".implode(",\n", $zone_lines)."\n\t\t]";
 
 
 	#
@@ -86,16 +86,16 @@
 	foreach ($exacts as $k => $v){
 		$k = json_encode($k);
 		$v = json_encode($v);
-		$exact_lines[] = "\t{$k}: {$v}";
+		$exact_lines[] = "\t\t\t{$k}: {$v}";
 	}
-	$exact = "{\n".implode(",\n", $exact_lines)."\n}";
+	$exact = "{\n".implode(",\n", $exact_lines)."\n\t\t}";
 
 	$broken = "// The follow zone IDs have no mapping to our choice list:\n";
 	foreach ($no_exact as $id){
 		if (isset($core[$id])){
-			$broken .= "// $id\n";
+			$broken .= "\t\t// $id\n";
 		}else{
-			$broken .= "// $id (Obsolete)\n";
+			$broken .= "\t\t// $id (Obsolete)\n";
 		}
 	}
 
