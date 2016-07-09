@@ -41,9 +41,21 @@ Since the library is written in PHP, this is easiest:
 
     echo "</select>\n";
 
+If you are getting timezone IDs from some other source, you can map it to one of the
+choices like this:
+
+    $zone = timezones_filter($any_zone_id);
+
 Once you have a timezone ID, you can switch to it very simply:
 
-    date_default_timezone_set($id);
+    date_default_timezone_set($zone);
+
+If you want to display a human readable zone label, there's a function for that too:
+
+    echo "It's currently ".date('H:i')." ".timezones_label($zone);
+    // e.g. "It's currently 10:32 Cuba Daylight Time"
+
+The labnel will take into account daylight savings in the specified zone.
 
 
 ## Usage - Auto-detecting a Timezone from JavaScript
@@ -63,6 +75,17 @@ guess at the local timezone, as a `zone.tab` identifier.
 While the main library is written in PHP, exporting it in a format usable in other languages 
 is trivial. If you'd like the data in a particular format, please send a pull request or open
 an issue and I'll add it.
+
+
+## Contributing
+
+The list of which zones to shows as choices, along with which zone IDs should be mapped to each
+other are defined in `data/static.php`. When you modify that file, you'll need to rebuild the
+libraries as follows:
+
+    npm install // first time only
+    bower install // first time only
+    grunt
 
 
 ## Caveats
