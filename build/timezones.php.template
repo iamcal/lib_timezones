@@ -16,8 +16,6 @@
 	#   [DROPDOWN-LABEL, TZ-ID, DEFAULT-FOR-OFFSET, LABEL, DST-LABEL]
 	#
 
-	timezones_init();
-
 	function timezones_list(){
 
 		return array(
@@ -146,54 +144,26 @@
 		);
 	}
 
-	function timezones_equiv(){
+	function timezones_is_choice($zone){
 
-		# automatically built equivs list
-		#MAP#
-
-		# manual overrides
-		$map["America/Guatemala"]	= "America/Belize";
-		$map["America/Indianapolis"]	= "America/Indiana/Indianapolis";
-		$map["America/La_Paz"]		= "America/Manaus";
-		$map["UTC"]			= "Africa/Monrovia";
-		$map["Atlantic/Reykjavik"]	= "Africa/Monrovia";
-		$map["Europe/Berlin"]		= "Europe/Amsterdam";
-		$map["Europe/Budapest"]		= "Europe/Belgrade";
-		$map["Europe/Paris"]		= "Europe/Brussels";
-		$map["Africa/Lagos"]		= "Africa/Algiers";
-		$map["Europe/Bucharest"]	= "Europe/Athens";
-		$map["Africa/Johannesburg"]	= "Africa/Harare";
-		$map["Europe/Kiev"]		= "Europe/Helsinki";
-		$map["Europe/Istanbul"]		= "Asia/Istanbul";
-		$map["Asia/Riyadh"]		= "Asia/Kuwait";
-		$map["Asia/Dubai"]		= "Asia/Muscat";
-		$map["Asia/Calcutta"]		= "Asia/Kolkata";
-		$map["Asia/Shanghai"]		= "Asia/Chongqing";
-		$map["Asia/Singapore"]		= "Asia/Kuala_Lumpur";
-		$map["Australia/Sydney"]	= "Australia/Canberra";
-		$map["Pacific/Port_Moresby"]	= "Pacific/Guam";
-		$map["Asia/Kamchatka"]		= "Asia/Anadyr";
-
-		return $map;
+		return in_array($zone, #ZONE-CHOICES#);
 	}
 
+	function timezones_filter($zone, $default=null){
 
-	function timezones_init(){
+		if (timezones_is_choice($zone)) return $zone;
 
-		$GLOBALS['_timezones_label_map'] = array();
+		$manual_map = #MANUAL-MAP#;
+		$auto_map = #AUTO-MAP#;
+		$fallback_map = #FALLBACK-MAP";
 
-		$list = timezones_list();
-		foreach ($list as $row){
-			$GLOBALS['_timezones_label_map'][$row[1]] = $row;
-		}
+		if ($manual_map[$zone]) return $manual_map[$zone];
+		if ($auto_map[$zone]) return $auto_map[$zone];
+		if ($fallback_map[$zone]) return $fallback_map[$zone];
+
+		return $default;
 	}
 
-	function timezones_filter($str){
-
-		if (isset($GLOBALS['_timezones_label_map'][$str])) return $str;
-
-		return null;
-	}
 
 	#
 	# Retrieve the proper label of a timezone, at timestamp $ts (default to now).
