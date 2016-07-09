@@ -148,29 +148,29 @@
 	# of their equivilence - these are resolved first, before automatic ones, which
 	# are before the final fallback mappings
 
-	$timezones_manual_mappings = array(
-		"America/Guatemala"	= "America/Belize",
-		"America/Indianapolis"	= "America/Indiana/Indianapolis",
-		"America/La_Paz"	= "America/Manaus",
-		"UTC"			= "Africa/Monrovia",
-		"Atlantic/Reykjavik"	= "Africa/Monrovia",
-		"Europe/Berlin"		= "Europe/Amsterdam",
-		"Europe/Budapest"	= "Europe/Belgrade",
-		"Europe/Paris"		= "Europe/Brussels",
-		"Africa/Lagos"		= "Africa/Algiers",
-		"Europe/Bucharest"	= "Europe/Athens",
-		"Africa/Johannesburg"	= "Africa/Harare",
-		"Europe/Kiev"		= "Europe/Helsinki",
-		"Europe/Istanbul"	= "Asia/Istanbul",
-		"Asia/Riyadh"		= "Asia/Kuwait",
-		"Asia/Dubai"		= "Asia/Muscat",
-		"Asia/Calcutta"		= "Asia/Kolkata",
-		"Asia/Shanghai"		= "Asia/Chongqing",
-		"Asia/Singapore"	= "Asia/Kuala_Lumpur",
-		"Australia/Sydney"	= "Australia/Canberra",
-		"Pacific/Port_Moresby"	= "Pacific/Guam",
-		"Asia/Kamchatka"	= "Asia/Anadyr",
+	$timezones_manual_map = array(
+		"America/Guatemala"	=> "America/Belize",
+		"America/Indianapolis"	=> "America/Indiana/Indianapolis",
+		"America/La_Paz"	=> "America/Manaus",
+		"UTC"			=> "Africa/Monrovia",
+		"Atlantic/Reykjavik"	=> "Africa/Monrovia",
+		"Europe/Berlin"		=> "Europe/Amsterdam",
+		"Europe/Budapest"	=> "Europe/Belgrade",
+		"Europe/Paris"		=> "Europe/Brussels",
+		"Africa/Lagos"		=> "Africa/Algiers",
+		"Europe/Bucharest"	=> "Europe/Athens",
+		"Africa/Johannesburg"	=> "Africa/Harare",
+		"Europe/Kiev"		=> "Europe/Helsinki",
+		"Europe/Istanbul"	=> "Asia/Istanbul",
+		"Asia/Riyadh"		=> "Asia/Kuwait",
+		"Asia/Dubai"		=> "Asia/Muscat",
+		"Asia/Calcutta"		=> "Asia/Kolkata",
+		"Asia/Shanghai"		=> "Asia/Chongqing",
+		"Asia/Singapore"	=> "Asia/Kuala_Lumpur",
+		"Australia/Sydney"	=> "Australia/Canberra",
+		"Pacific/Port_Moresby"	=> "Pacific/Guam",
+		"Asia/Kamchatka"	=> "Asia/Anadyr",
 	);
 
-	$timezones_fallbacks = array(
+	$timezones_fallback_map = array(
 	);
