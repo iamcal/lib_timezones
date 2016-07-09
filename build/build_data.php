@@ -68,6 +68,7 @@
 			$no_exact[] = $k;
 		}
 	}
+	ksort($exacts);
 
 
 	#
@@ -91,6 +92,8 @@
 			$no_map_obsolete[] = $id;
 		}
 	}
+	sort($no_map_core);
+	sort($no_map_obsolete);
 
 
 	#
