@@ -455,14 +455,13 @@ $timezones_exact_map = array (
   'Zulu' => 'Africa/Monrovia',
 );
 $timezones_nomap = array (
-  0 => 'America/Fort_Nelson',
-  1 => 'America/Metlakatla',
-  2 => 'America/Noronha',
-  3 => 'Antarctica/Troll',
-  4 => 'Atlantic/South_Georgia',
-  5 => 'Europe/Chisinau',
-  6 => 'Pacific/Gambier',
-  7 => 'Pacific/Pitcairn',
+  0 => 'America/Metlakatla',
+  1 => 'America/Noronha',
+  2 => 'Antarctica/Troll',
+  3 => 'Atlantic/South_Georgia',
+  4 => 'Europe/Chisinau',
+  5 => 'Pacific/Gambier',
+  6 => 'Pacific/Pitcairn',
 );
 $timezones_nomap_obsolete = array (
   0 => 'Brazil/DeNoronha',
