@@ -749,11 +749,12 @@
 			'Zulu' => 'Africa/Monrovia',
 		);
 		$fallback_map = array(
+			'America/Fort_Nelson' => 'America/Denver',
 		);
 
-		if ($manual_map[$zone]) return $manual_map[$zone];
-		if ($auto_map[$zone]) return $auto_map[$zone];
-		if ($fallback_map[$zone]) return $fallback_map[$zone];
+		if (isset($manual_map[$zone])) return $manual_map[$zone];
+		if (isset($auto_map[$zone])) return $auto_map[$zone];
+		if (isset($fallback_map[$zone])) return $fallback_map[$zone];
 
 		return $default;
 	}
@@ -772,7 +773,7 @@
 				if ($row[4]){
 
 					$prev = date_default_timezone_get();
-					date_default_timezone_set($id);
+					date_default_timezone_set($zone);
 					$is_dst = $ts ? date('I', $ts) : date('I');
 					date_default_timezone_set($prev);
 
