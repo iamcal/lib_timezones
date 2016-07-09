@@ -1,25 +1,7 @@
 <?php
-	include(dirname(__FILE__).'/../lib/lib_timezones.php');
-
-	date_default_timezone_set('America/Los_Angeles');
-
-	$zones = timezones_list();
-
-	$base_dates = array(
-		array(0,0,0,10,27,2008),
-		array(0,0,0,4,30,2010),
-
-		array(0,0,0,10,28,2001),
-		array(0,0,0,4,7,2002),
-		array(0,0,0,10,3,2004),
-
-
-		array(0,0,0,11,7,2011),
-		array(0,0,0,11,10,2012),
-		array(0,0,0,9,22,2015),
-		array(0,0,0,11,2,2015),
-		array(0,0,0,3,27,2016),
-	);
+	#
+	# functions for building probe maps
+	#
 
 
 	function build_map($zones, $dates){
@@ -68,7 +50,6 @@
 
 		return $map;
 	}
-
 
 	function shrink_map($map){
 

@@ -143,6 +143,7 @@
 		array('(UTC+14:00) Kiritimati Island',					'Pacific/Kiritimati',		false,	'Line Islands Time',			null),
 	);
 
+
 	# mappings of zones that Windows returns, but we don't have in our master list.
 	# we explicitly list them here because we can't always do an automated mapping
 	# of their equivilence - these are resolved first, before automatic ones, which
@@ -172,5 +173,29 @@
 		"Asia/Kamchatka"	=> "Asia/Anadyr",
 	);
 
+
+	# mappings of zones that don't really match one of our choices, but
+	# would be better than just giving up/using a default.
+
 	$timezones_fallback_map = array(
 	);
+
+
+	# the list of dates we'll use for doing probing in JS. the format
+	# is the same as mktime() : H,i,s,m,d,Y
+
+	$timezones_probe_dates = array(
+		array(0,0,0,10,27,2008),
+		array(0,0,0,4,30,2010),
+
+		array(0,0,0,10,28,2001),
+		array(0,0,0,4,7,2002),
+		array(0,0,0,10,3,2004),
+
+		array(0,0,0,11,7,2011),
+		array(0,0,0,11,10,2012),
+		array(0,0,0,9,22,2015),
+		array(0,0,0,11,2,2015),
+		array(0,0,0,3,27,2016),
+	);
+

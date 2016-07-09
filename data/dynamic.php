@@ -472,3 +472,463 @@ $timezones_nomap_obsolete = array (
   4 => 'Etc/GMT+9',
   5 => 'Europe/Tiraspol',
 );
+$timezones_probe_map = array (
+  '-660:-660:-660:-660:-660:-660' => 
+  array (
+    0 => 'Pacific/Midway',
+  ),
+  -540 => 
+  array (
+    0 => 'America/Adak',
+  ),
+  -600 => 
+  array (
+    0 => 'Pacific/Honolulu',
+  ),
+  -570 => 
+  array (
+    0 => 'Pacific/Marquesas',
+  ),
+  '-480:-480' => 
+  array (
+    0 => 'America/Anchorage',
+  ),
+  '-480:-420' => 
+  array (
+    0 => 'America/Tijuana',
+  ),
+  '-420:-420:-420:-480' => 
+  array (
+    0 => 'America/Los_Angeles',
+  ),
+  '-420:-420:-420:-420' => 
+  array (
+    0 => 'America/Phoenix',
+  ),
+  '-420:-360' => 
+  array (
+    0 => 'America/Chihuahua',
+  ),
+  '-360:-360:-360:-420' => 
+  array (
+    0 => 'America/Denver',
+  ),
+  '-360:-360:-360:-360' => 
+  array (
+    0 => 'America/Regina',
+    1 => 'America/Belize',
+  ),
+  '-300:-300:-300:-360' => 
+  array (
+    0 => 'America/Chicago',
+  ),
+  '-300:-360' => 
+  array (
+    0 => 'Pacific/Easter',
+  ),
+  '-360:-300:-360:-360:-300:-360:-360:-300:-360' => 
+  array (
+    0 => 'America/Mexico_City',
+  ),
+  '-300:-300:-300:-300:-300:-300:-300:-300' => 
+  array (
+    0 => 'America/Bogota',
+  ),
+  '-360:-300:-360:-360:-300:-360:-360:-300:-300' => 
+  array (
+    0 => 'America/Cancun',
+  ),
+  '-240:-240:-240:-300:-240:-300:-300:-240:-300' => 
+  array (
+    0 => 'America/New_York',
+  ),
+  '-300:-300:-300:-300:-300:-300:-300:-240' => 
+  array (
+    0 => 'America/Port-au-Prince',
+  ),
+  '-300:-240' => 
+  array (
+    0 => 'America/Havana',
+  ),
+  '-240:-240:-300' => 
+  array (
+    0 => 'America/Indiana/Indianapolis',
+  ),
+  '-180:-240:-180:-180' => 
+  array (
+    0 => 'America/Asuncion',
+  ),
+  '-180:-180:-180:-240' => 
+  array (
+    0 => 'America/Halifax',
+  ),
+  -270 => 
+  array (
+    0 => 'America/Caracas',
+  ),
+  '-180:-240:-180:-240:-240:-180:-180:-240' => 
+  array (
+    0 => 'America/Cuiaba',
+  ),
+  '-240:-240:-240:-240' => 
+  array (
+    0 => 'America/Manaus',
+  ),
+  '-180:-240:-180:-240:-240:-180:-180:-180' => 
+  array (
+    0 => 'America/Santiago',
+  ),
+  '-240:-240:-240:-300:-240:-300:-300:-240:-240' => 
+  array (
+    0 => 'America/Grand_Turk',
+  ),
+  -150 => 
+  array (
+    0 => 'America/St_Johns',
+  ),
+  '-180:-180:-120:-180:-180:-180' => 
+  array (
+    0 => 'America/Fortaleza',
+  ),
+  '-120:-180:-120' => 
+  array (
+    0 => 'America/Sao_Paulo',
+  ),
+  '-180:-180:-180:-180' => 
+  array (
+    0 => 'America/Cayenne',
+  ),
+  '-120:-180:-180:-180:-180' => 
+  array (
+    0 => 'America/Buenos_Aires',
+  ),
+  '-180:-120' => 
+  array (
+    0 => 'America/Godthab',
+  ),
+  '-120:-180:-180:-180:-120' => 
+  array (
+    0 => 'America/Montevideo',
+  ),
+  '-120:-120' => 
+  array (
+    0 => 'America/Miquelon',
+  ),
+  '-180:-180:-120:-180:-180:-120' => 
+  array (
+    0 => 'America/Bahia',
+  ),
+  '-60:0' => 
+  array (
+    0 => 'Atlantic/Azores',
+  ),
+  '-60:-60' => 
+  array (
+    0 => 'Atlantic/Cape_Verde',
+  ),
+  '0:0:0:0:0:0:0:60' => 
+  array (
+    0 => 'Africa/Casablanca',
+  ),
+  '0:60' => 
+  array (
+    0 => 'Europe/London',
+  ),
+  '0:0:0:0:0:0:0:0' => 
+  array (
+    0 => 'Africa/Monrovia',
+  ),
+  '60:120' => 
+  array (
+    0 => 'Europe/Amsterdam',
+    1 => 'Europe/Belgrade',
+    2 => 'Europe/Brussels',
+    3 => 'Europe/Warsaw',
+  ),
+  '60:60' => 
+  array (
+    0 => 'Africa/Algiers',
+  ),
+  '120:60' => 
+  array (
+    0 => 'Africa/Windhoek',
+  ),
+  '180:180:120:180:180' => 
+  array (
+    0 => 'Asia/Amman',
+  ),
+  '120:180:180' => 
+  array (
+    0 => 'Europe/Athens',
+    1 => 'Europe/Helsinki',
+  ),
+  '120:180:120:180:180:120:120:180:120' => 
+  array (
+    0 => 'Asia/Beirut',
+  ),
+  '120:180:120:120:120:120:120:120' => 
+  array (
+    0 => 'Africa/Cairo',
+  ),
+  '180:180:120:180:120' => 
+  array (
+    0 => 'Asia/Damascus',
+  ),
+  '120:180:120:120:120:120:120:180' => 
+  array (
+    0 => 'Asia/Gaza',
+  ),
+  '120:120:120:120:120:120:120' => 
+  array (
+    0 => 'Africa/Harare',
+  ),
+  '120:180:120:180:180:120:120:180:180' => 
+  array (
+    0 => 'Asia/Istanbul',
+  ),
+  '120:180:120:180:120' => 
+  array (
+    0 => 'Asia/Jerusalem',
+  ),
+  '120:180:120:180:180:180:180:120' => 
+  array (
+    0 => 'Europe/Kaliningrad',
+  ),
+  '120:120:120:120:120:120:60' => 
+  array (
+    0 => 'Africa/Tripoli',
+  ),
+  '180:180:180:240' => 
+  array (
+    0 => 'Asia/Baghdad',
+  ),
+  '180:180:180:180' => 
+  array (
+    0 => 'Asia/Kuwait',
+    1 => 'Africa/Nairobi',
+  ),
+  '120:180:120:180:180:180:180:180' => 
+  array (
+    0 => 'Europe/Minsk',
+  ),
+  '180:240:180:240:240:240:240:180:180:180' => 
+  array (
+    0 => 'Europe/Moscow',
+  ),
+  210 => 
+  array (
+    0 => 'Asia/Tehran',
+  ),
+  '240:240:240:240' => 
+  array (
+    0 => 'Asia/Muscat',
+  ),
+  '180:240:180:240:240:240:240:180:180:240' => 
+  array (
+    0 => 'Europe/Astrakhan',
+  ),
+  '240:300:240:300:300:240:240:300' => 
+  array (
+    0 => 'Asia/Baku',
+  ),
+  '240:240:240:300:300' => 
+  array (
+    0 => 'Europe/Samara',
+  ),
+  '300:240' => 
+  array (
+    0 => 'Indian/Mauritius',
+  ),
+  '240:240:240:300:240' => 
+  array (
+    0 => 'Asia/Tbilisi',
+  ),
+  '240:300:240:300:300:240:240:240' => 
+  array (
+    0 => 'Asia/Yerevan',
+  ),
+  270 => 
+  array (
+    0 => 'Asia/Kabul',
+  ),
+  '300:300' => 
+  array (
+    0 => 'Asia/Tashkent',
+  ),
+  '300:360' => 
+  array (
+    0 => 'Asia/Yekaterinburg',
+  ),
+  '360:300' => 
+  array (
+    0 => 'Asia/Karachi',
+  ),
+  '330:330:330' => 
+  array (
+    0 => 'Asia/Kolkata',
+  ),
+  '330:330:360' => 
+  array (
+    0 => 'Asia/Colombo',
+  ),
+  345 => 
+  array (
+    0 => 'Asia/Katmandu',
+  ),
+  '360:360:360:420' => 
+  array (
+    0 => 'Asia/Almaty',
+  ),
+  '360:360:360:360' => 
+  array (
+    0 => 'Asia/Dhaka',
+  ),
+  '360:420:360:420:420:420:420:360:360:360' => 
+  array (
+    0 => 'Asia/Novosibirsk',
+  ),
+  390 => 
+  array (
+    0 => 'Asia/Rangoon',
+  ),
+  '420:420:420:420' => 
+  array (
+    0 => 'Asia/Bangkok',
+  ),
+  '360:420:360:420:420:420:420:360:360:420' => 
+  array (
+    0 => 'Asia/Barnaul',
+  ),
+  '420:420:420:480' => 
+  array (
+    0 => 'Asia/Hovd',
+  ),
+  '420:480' => 
+  array (
+    0 => 'Asia/Krasnoyarsk',
+  ),
+  '360:420:420' => 
+  array (
+    0 => 'Asia/Tomsk',
+  ),
+  '480:480:480:480' => 
+  array (
+    0 => 'Asia/Chongqing',
+    1 => 'Asia/Kuala_Lumpur',
+    2 => 'Asia/Taipei',
+  ),
+  '480:540' => 
+  array (
+    0 => 'Asia/Irkutsk',
+  ),
+  '540:480' => 
+  array (
+    0 => 'Australia/Perth',
+  ),
+  '480:480:480:540' => 
+  array (
+    0 => 'Asia/Ulaanbaatar',
+  ),
+  '540:540:540:540:540:540:540:510' => 
+  array (
+    0 => 'Asia/Pyongyang',
+  ),
+  585 => 
+  array (
+    0 => 'Australia/Eucla',
+  ),
+  '540:600:540:600:600:600:600:480' => 
+  array (
+    0 => 'Asia/Chita',
+  ),
+  '540:540:540:540:540:540:540:540' => 
+  array (
+    0 => 'Asia/Tokyo',
+    1 => 'Asia/Seoul',
+  ),
+  '540:600:540:600:600:600:600:540' => 
+  array (
+    0 => 'Asia/Yakutsk',
+  ),
+  630 => 
+  array (
+    0 => 'Australia/Adelaide',
+  ),
+  570 => 
+  array (
+    0 => 'Australia/Darwin',
+  ),
+  '600:600:600:600:600:600:600:600' => 
+  array (
+    0 => 'Australia/Brisbane',
+    1 => 'Pacific/Guam',
+  ),
+  '660:600:660:600:600' => 
+  array (
+    0 => 'Australia/Canberra',
+  ),
+  '660:600:660:600:660' => 
+  array (
+    0 => 'Australia/Hobart',
+  ),
+  '600:660:600:660:660:660:660:600:600:600' => 
+  array (
+    0 => 'Asia/Vladivostok',
+  ),
+  '660:630' => 
+  array (
+    0 => 'Australia/Lord_Howe',
+  ),
+  '600:600:600:600:600:600:600:660' => 
+  array (
+    0 => 'Pacific/Bougainville',
+  ),
+  '660:720:660:720:720:720:720:660' => 
+  array (
+    0 => 'Asia/Srednekolymsk',
+  ),
+  '660:720:660:720:720:720:720:600' => 
+  array (
+    0 => 'Asia/Magadan',
+  ),
+  690 => 
+  array (
+    0 => 'Pacific/Norfolk',
+  ),
+  '600:660:600:660:660:660:660:600:600:660' => 
+  array (
+    0 => 'Asia/Sakhalin',
+  ),
+  '660:660' => 
+  array (
+    0 => 'Pacific/Guadalcanal',
+  ),
+  '720:720:720:780' => 
+  array (
+    0 => 'Asia/Anadyr',
+  ),
+  '780:720' => 
+  array (
+    0 => 'Pacific/Auckland',
+  ),
+  '720:720:720:720' => 
+  array (
+    0 => 'Pacific/Fiji',
+  ),
+  825 => 
+  array (
+    0 => 'Pacific/Chatham',
+  ),
+  '780:780' => 
+  array (
+    0 => 'Pacific/Tongatapu',
+  ),
+  '-660:-660:-660:-660:-660:-600' => 
+  array (
+    0 => 'Pacific/Apia',
+  ),
+  840 => 
+  array (
+    0 => 'Pacific/Kiritimati',
+  ),
+);

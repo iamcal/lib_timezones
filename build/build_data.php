@@ -4,10 +4,11 @@
 	#
 
 	include(dirname(__FILE__).'/../data/static.php');
+	include(dirname(__FILE__).'/lib.php');
 
 
 	#
-	# fir every zone this OS knows about, figure out a hash of unique transitions between 2 dates.
+	# for every zone this OS knows about, figure out a hash of unique transitions between 2 dates.
 	# this allows us to map equivalent zones.
 	#
 
@@ -97,6 +98,14 @@
 
 
 	#
+	# build a probe map
+	#
+
+        $probe_map = build_map($timezones_list, $timezones_probe_dates);
+        $probe_map = shrink_map($probe_map);
+
+
+	#
 	# output our calculated data
 	#
 
@@ -107,3 +116,4 @@
 	fputs($fh, "\$timezones_exact_map = ".var_export($exacts, true).";\n");
 	fputs($fh, "\$timezones_nomap = ".var_export($no_map_core, true).";\n");
 	fputs($fh, "\$timezones_nomap_obsolete = ".var_export($no_map_obsolete, true).";\n");
+	fputs($fh, "\$timezones_probe_map = ".var_export($probe_map, true).";\n");
