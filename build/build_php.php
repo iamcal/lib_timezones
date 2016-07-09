@@ -58,5 +58,4 @@
 
 	$template = str_replace(array_keys($vars), $vars, $template);
 
-	$fh = fopen(dirname(__FILE__).'/../lib/lib_timezones.php', 'w');
-	fputs($fh, $template);
+	echo $template;
