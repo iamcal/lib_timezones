@@ -42,13 +42,14 @@ module.exports = function(grunt) {
 		'php build/build_php.php > lib/lib_timezones.php',
 		'php build/build_js.php > lib/lib_timezones.js'
 	].join('&&')
-      }
+      },
+      'test-php': "prove --exec 'php' -fco test/simple.php"
     }
   });
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-karma');
   grunt.loadNpmTasks('grunt-karma-coveralls');
   grunt.loadNpmTasks('grunt-shell');
-  grunt.registerTask('default', ['shell:compile', 'uglify', 'karma:unit', 'karma:coverage']);
+  grunt.registerTask('default', ['shell:compile', 'uglify', 'karma:unit', 'karma:coverage', 'shell:test-php']);
   
 };
