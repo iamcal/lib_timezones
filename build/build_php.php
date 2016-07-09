@@ -12,10 +12,20 @@
 	# build up our output
 	#
 
+	$choices = "array(\n";
 	$zone_choices = "array(\n";
+
 	foreach ($timezones_list as $row){
+
+		$fields = array();
+		foreach ($row as $f) $fields[] = var_export($f, true);
+
+		$choices .= "\t\t\tarray(".implode(', ', $fields)."),\n";
+
 		$zone_choices .= "\t\t\t".var_export($row[1], true).",\n";
 	}
+
+	$choices .= "\t\t)";
 	$zone_choices .= "\t\t)";
 
 
@@ -37,6 +47,7 @@
 	#
 
 	$vars = array(
+		'#CHOICES#'		=> $choices,
 		'#ZONE-CHOICES#'	=> $zone_choices,
 		'#MANUAL-MAP#'		=> $manual_map,
 		'#AUTO-MAP#'		=> $auto_map,
