@@ -3,7 +3,7 @@
 	# first, load our manually defined data
 	#
 
-	include('data.php');
+	include(dirname(__FILE__).'/../data/static.php');
 
 
 	#
