@@ -1,4 +1,5 @@
 <?php
+	include('../data/static.php');
 	include('lib.php');
 
 
@@ -6,12 +7,12 @@
 	# dump unmatched
 	#
 
-	$map = build_map($zones, $base_dates);
+	$map = build_map($timezones_list, $timezones_probe_dates);
 
-	$per = count($map) / count($zones);
+	$per = count($map) / count($timezones_list);
 	$per = round($per * 1000) / 10;
 
-	echo "number of zones in list  : ".count($zones)."\n";
+	echo "number of zones in list  : ".count($timezones_list)."\n";
 	echo "number of zones detected : ".count($map)."\n";
 	echo "match rate : {$per}%\n";
 	echo "\n";

@@ -1,4 +1,5 @@
 <?php
+	include('../data/static.php');
 	include('lib.php');
 
 
@@ -14,12 +15,12 @@
 
 			$d = array(0,0,0,1,1+$i,1995);
 
-			$dates = $base_dates;
+			$dates = $timezones_probe_dates;
 			$dates[] = $d;
 
 			$k = date('Y-m-d', mktime($d[0], $d[1], $d[2], $d[3], $d[4], $d[5]));
 
-			$map = build_map($zones, $dates);
+			$map = build_map($timezones_list, $dates);
 			$num = count($map);
 			$best[$num][] = $k;
 		}
@@ -56,7 +57,7 @@
 
 				$k = gmdate('H-i-s-m-d-Y', gmmktime($d[0],$d[1],$d[2],$d[3],$d[4],$d[5]));
 
-				$map = build_map($zones, $dates);
+				$map = build_map($timezones_list, $dates);
 				$num = count($map);
 				$best[$num][] = $k;
 			}

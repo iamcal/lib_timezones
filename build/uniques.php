@@ -1,8 +1,6 @@
 <?php
+	include('../data/static.php');
 	include('lib.php');
-
-
-	$zones = timezones_list();
 
 
 	#
@@ -21,7 +19,7 @@
 
 	echo "Showing non-unique timezones from our choice list between $fd and $td:\n\n";
 
-	foreach ($zones as $row){
+	foreach ($timezones_list as $row){
 
 		if ($row[2]) $tops[$row[1]] = true;
 		$labels[$row[1]] = $row[0];
