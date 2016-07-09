@@ -7,5 +7,4 @@ before_script:
   - bower install
 script:
   - grunt
-  - cat lib/lib_timezones.js
   - grunt coveralls
