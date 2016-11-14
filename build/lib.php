@@ -27,6 +27,8 @@
 		foreach ($zones as $row){
 
 			$tz = timezone_open($row[1]);
+			if (!$tz) continue;
+
 			$bits = array();
 
 			foreach ($probe_dates as $d){

@@ -24,16 +24,14 @@
 		if ($tz){
 			$trans = timezone_transitions_get($tz, $from, $to);
 			if ($trans === false){
-				$STDERR = fopen('php://stderr', 'w+');
-				fwrite($STDERR, "ERROR: failed to get transition data for zone {$zone_id}\n");
+				data_error("failed to get transition data for zone {$zone_id}");
 			}else{
 				foreach ($trans as $k => $v){
 					unset($trans[$k]['abbr']);
 				}
 			}
 		}else{
-			$STDERR = fopen('php://stderr', 'w+');
-			fwrite($STDERR, "ERROR: unable to open zone {$zone_id}\n");
+			data_error("unable to open zone {$zone_id}");
 			$trans = array();
 		}
 
@@ -50,8 +48,12 @@
 	$choices = array();
 	foreach ($timezones_list as $row){
 		$skip[$row[1]] = true;
-		$hash = $hashes[$row[1]];
-		if (!isset($choices[$hash]) || $row[2]) $choices[$hash] = $row[1];
+		if (isset($hashes[$row[1]])){
+			$hash = $hashes[$row[1]];
+			if (!isset($choices[$hash]) || $row[2]) $choices[$hash] = $row[1];
+		}else{
+			data_error("failed to get zone data for {$row[1]}");
+		}
 	}
 
 
@@ -117,3 +119,18 @@
 	fputs($fh, "\$timezones_nomap = ".var_export($no_map_core, true).";\n");
 	fputs($fh, "\$timezones_nomap_obsolete = ".var_export($no_map_obsolete, true).";\n");
 	fputs($fh, "\$timezones_probe_map = ".var_export($probe_map, true).";\n");
+
+
+	function data_error($msg){
+		$STDERR = fopen('php://stderr', 'w+');
+		fwrite($STDERR, "ERROR: $msg\n");
+
+		if (!isset($GLOBALS['data_error'])){
+			fwrite($STDERR, "NOTICE: >>>> You likely need to update your tzdata package and start over <<<<\n");
+			$GLOBALS['data_error'] = true;
+		}
+	}
+
+	if (isset($GLOBALS['data_error'])){
+		exit(1);
+	}
