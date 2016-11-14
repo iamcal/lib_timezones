@@ -24,14 +24,14 @@
 		if ($tz){
 			$trans = timezone_transitions_get($tz, $from, $to);
 			if ($trans === false){
-				data_error("failed to get transition data for zone {$zone_id}");
+				data_error("failed to get transition data for zone {$zone_id}", false);
 			}else{
 				foreach ($trans as $k => $v){
 					unset($trans[$k]['abbr']);
 				}
 			}
 		}else{
-			data_error("unable to open zone {$zone_id}");
+			data_error("unable to open zone {$zone_id}", true);
 			$trans = array();
 		}
 
@@ -52,7 +52,7 @@
 			$hash = $hashes[$row[1]];
 			if (!isset($choices[$hash]) || $row[2]) $choices[$hash] = $row[1];
 		}else{
-			data_error("failed to get zone data for {$row[1]}");
+			data_error("failed to get zone data for {$row[1]}", true);
 		}
 	}
 
@@ -121,7 +121,7 @@
 	fputs($fh, "\$timezones_probe_map = ".var_export($probe_map, true).";\n");
 
 
-	function data_error($msg){
+	function data_error($msg, $fatal){
 		$STDERR = fopen('php://stderr', 'w+');
 		fwrite($STDERR, "ERROR: $msg\n");
 
@@ -129,8 +129,11 @@
 			fwrite($STDERR, "NOTICE: >>>> You likely need to update your tzdata package and start over <<<<\n");
 			$GLOBALS['data_error'] = true;
 		}
+		if ($fatal){
+			$GLOBALS['data_fatal_error'] = true;
+		}
 	}
 
-	if (isset($GLOBALS['data_error'])){
+	if (isset($GLOBALS['data_fatal_error'])){
 		exit(1);
 	}
