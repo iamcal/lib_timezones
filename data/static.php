@@ -79,7 +79,7 @@
 		array('(UTC+02:00) Kaliningrad',					'Europe/Kaliningrad',		false,	'Eastern European Time',		null), # RTZ1
 		array('(UTC+02:00) Tripoli',						'Africa/Tripoli',		false,	'Eastern European Time',		null),
 		array('(UTC+03:00) Baghdad',						'Asia/Baghdad',			false,	'Arabia Standard Time',			null),
-		array('(UTC+03:00) Istanbul',						'Asia/Istanbul',		false,	'Eastern European Time',		null),
+		array('(UTC+03:00) Istanbul',						'Asia/Istanbul',		false,	'Turkey Time',				null),
 		array('(UTC+03:00) Kuwait, Riyadh',					'Asia/Kuwait',			true,	'Arabia Standard Time',			null),
 		array('(UTC+03:00) Minsk',						'Europe/Minsk',			false,	'Further-eastern European Time',	null),
 		array('(UTC+03:00) Moscow, St. Petersburg, Volgograd',			'Europe/Moscow',		true,	'Moscow Time',				null), # RTZ2
