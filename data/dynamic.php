@@ -681,10 +681,6 @@ $timezones_probe_map = array (
   array (
     0 => 'Africa/Harare',
   ),
-  '120:180:120:180:180:120:120:180:180' => 
-  array (
-    0 => 'Asia/Istanbul',
-  ),
   '120:180:120:180:120' => 
   array (
     0 => 'Asia/Jerusalem',
@@ -700,6 +696,10 @@ $timezones_probe_map = array (
   '180:180:180:240' => 
   array (
     0 => 'Asia/Baghdad',
+  ),
+  '120:180:120:180:180:120:120:180:180' => 
+  array (
+    0 => 'Asia/Istanbul',
   ),
   '180:180:180:180' => 
   array (
