@@ -56,6 +56,7 @@
 		array('(UTC-03:00) Montevideo',						'America/Montevideo',		false,	'Uruguay Time',				'Uruguay Summer Time'),
 		array('(UTC-03:00) Saint Pierre and Miquelon',				'America/Miquelon',		false,	'Pierre & Miquelon Standard Time',	'Pierre & Miquelon Daylight Time'),
 		array('(UTC-03:00) Salvador',						'America/Bahia',		false,	'Brasilia Time',			'Brasilia Summer Time'),
+		array('(UTC-02:00) Fernando de Noronha',				'America/Noronha',		true,	'Fernando de Noronha Time',		null),
 		array('(UTC-01:00) Azores',						'Atlantic/Azores',		false,	'Azores Time',				'Azores Summer Time'),
 		array('(UTC-01:00) Cabo Verde Islands',					'Atlantic/Cape_Verde',		false,	'Cape Verde Time',			null),
 		array('(UTC) Casablanca',						'Africa/Casablanca',		false,	'Western European Time',		'Western European Summer Time'),
