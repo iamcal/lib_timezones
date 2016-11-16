@@ -245,6 +245,7 @@ $timezones_exact_map = array (
   'Atlantic/Jan_Mayen' => 'Europe/Amsterdam',
   'Atlantic/Madeira' => 'Europe/London',
   'Atlantic/Reykjavik' => 'Africa/Monrovia',
+  'Atlantic/South_Georgia' => 'America/Noronha',
   'Atlantic/St_Helena' => 'Africa/Monrovia',
   'Atlantic/Stanley' => 'America/Buenos_Aires',
   'Australia/ACT' => 'Australia/Canberra',
@@ -263,6 +264,7 @@ $timezones_exact_map = array (
   'Australia/West' => 'Asia/Chongqing',
   'Australia/Yancowinna' => 'Australia/Adelaide',
   'Brazil/Acre' => 'America/Bogota',
+  'Brazil/DeNoronha' => 'America/Noronha',
   'Brazil/East' => 'America/Sao_Paulo',
   'Brazil/West' => 'America/Manaus',
   'CET' => 'Europe/Amsterdam',
@@ -289,6 +291,7 @@ $timezones_exact_map = array (
   'Etc/GMT+1' => 'Atlantic/Cape_Verde',
   'Etc/GMT+10' => 'Pacific/Honolulu',
   'Etc/GMT+11' => 'Pacific/Midway',
+  'Etc/GMT+2' => 'America/Noronha',
   'Etc/GMT+3' => 'America/Buenos_Aires',
   'Etc/GMT+4' => 'America/Manaus',
   'Etc/GMT+5' => 'America/Bogota',
@@ -456,20 +459,16 @@ $timezones_exact_map = array (
 );
 $timezones_nomap = array (
   0 => 'America/Metlakatla',
-  1 => 'America/Noronha',
-  2 => 'Antarctica/Troll',
-  3 => 'Atlantic/South_Georgia',
-  4 => 'Europe/Chisinau',
-  5 => 'Pacific/Gambier',
-  6 => 'Pacific/Pitcairn',
+  1 => 'Antarctica/Troll',
+  2 => 'Europe/Chisinau',
+  3 => 'Pacific/Gambier',
+  4 => 'Pacific/Pitcairn',
 );
 $timezones_nomap_obsolete = array (
-  0 => 'Brazil/DeNoronha',
-  1 => 'Etc/GMT+12',
-  2 => 'Etc/GMT+2',
-  3 => 'Etc/GMT+8',
-  4 => 'Etc/GMT+9',
-  5 => 'Europe/Tiraspol',
+  0 => 'Etc/GMT+12',
+  1 => 'Etc/GMT+8',
+  2 => 'Etc/GMT+9',
+  3 => 'Europe/Tiraspol',
 );
 $timezones_probe_map = array (
   '-660:-660:-660:-660:-660:-660' => 
@@ -609,13 +608,17 @@ $timezones_probe_map = array (
   array (
     0 => 'America/Montevideo',
   ),
-  '-120:-120' => 
+  '-120:-120:-120' => 
   array (
     0 => 'America/Miquelon',
   ),
   '-180:-180:-120:-180:-180:-120' => 
   array (
     0 => 'America/Bahia',
+  ),
+  '-120:-120:-60' => 
+  array (
+    0 => 'America/Noronha',
   ),
   '-60:0' => 
   array (
