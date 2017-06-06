@@ -102,8 +102,8 @@
 		array('(UTC+05:45) Kathmandu',						'Asia/Katmandu',		false,	'Nepal Time',				null),
 		array('(UTC+06:00) Astana',						'Asia/Almaty',			false,	'Alma-Ata Time',			null),
 		array('(UTC+06:00) Dhaka',						'Asia/Dhaka',			true,	'Bangladesh Standard Time',		null),
-		array('(UTC+07:00) Novosibirsk',					'Asia/Novosibirsk',		false,	'Novosibirsk Time',			null), # RTZ5
 		array('(UTC+06:30) Yangon (Rangoon)',					'Asia/Rangoon',			false,	'Myanmar Time',				null),
+		array('(UTC+07:00) Novosibirsk',					'Asia/Novosibirsk',		false,	'Novosibirsk Time',			null), # RTZ5
 		array('(UTC+07:00) Bangkok, Hanoi, Jakarta',				'Asia/Bangkok',			false,	'Indochina Time',			null),
 		array('(UTC+07:00) Barnaul, Gorno-Altaysk',				'Asia/Barnaul',			false,	'Moscow Standard Time +4',		null),
 		array('(UTC+07:00) Hovd',						'Asia/Hovd',			false,	'Hovd Time',				'Hovd Summer Time'),
