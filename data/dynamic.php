@@ -9,9 +9,9 @@ $timezones_exact_map = array (
   'Africa/Bangui' => 'Africa/Algiers',
   'Africa/Banjul' => 'Africa/Monrovia',
   'Africa/Bissau' => 'Africa/Monrovia',
-  'Africa/Blantyre' => 'Africa/Harare',
+  'Africa/Blantyre' => 'Africa/Cairo',
   'Africa/Brazzaville' => 'Africa/Algiers',
-  'Africa/Bujumbura' => 'Africa/Harare',
+  'Africa/Bujumbura' => 'Africa/Cairo',
   'Africa/Ceuta' => 'Europe/Amsterdam',
   'Africa/Conakry' => 'Africa/Monrovia',
   'Africa/Dakar' => 'Africa/Monrovia',
@@ -20,23 +20,23 @@ $timezones_exact_map = array (
   'Africa/Douala' => 'Africa/Algiers',
   'Africa/El_Aaiun' => 'Africa/Casablanca',
   'Africa/Freetown' => 'Africa/Monrovia',
-  'Africa/Gaborone' => 'Africa/Harare',
-  'Africa/Johannesburg' => 'Africa/Harare',
+  'Africa/Gaborone' => 'Africa/Cairo',
+  'Africa/Johannesburg' => 'Africa/Cairo',
   'Africa/Juba' => 'Europe/Moscow',
   'Africa/Kampala' => 'Europe/Moscow',
   'Africa/Khartoum' => 'Europe/Moscow',
-  'Africa/Kigali' => 'Africa/Harare',
+  'Africa/Kigali' => 'Africa/Cairo',
   'Africa/Kinshasa' => 'Africa/Algiers',
   'Africa/Lagos' => 'Africa/Algiers',
   'Africa/Libreville' => 'Africa/Algiers',
   'Africa/Lome' => 'Africa/Monrovia',
   'Africa/Luanda' => 'Africa/Algiers',
-  'Africa/Lubumbashi' => 'Africa/Harare',
-  'Africa/Lusaka' => 'Africa/Harare',
+  'Africa/Lubumbashi' => 'Africa/Cairo',
+  'Africa/Lusaka' => 'Africa/Cairo',
   'Africa/Malabo' => 'Africa/Algiers',
-  'Africa/Maputo' => 'Africa/Harare',
-  'Africa/Maseru' => 'Africa/Harare',
-  'Africa/Mbabane' => 'Africa/Harare',
+  'Africa/Maputo' => 'Africa/Cairo',
+  'Africa/Maseru' => 'Africa/Cairo',
+  'Africa/Mbabane' => 'Africa/Cairo',
   'Africa/Mogadishu' => 'Europe/Moscow',
   'Africa/Ndjamena' => 'Africa/Algiers',
   'Africa/Niamey' => 'Africa/Algiers',
@@ -74,7 +74,6 @@ $timezones_exact_map = array (
   'America/Cambridge_Bay' => 'America/Denver',
   'America/Campo_Grande' => 'America/Cuiaba',
   'America/Catamarca' => 'America/Buenos_Aires',
-  'America/Cayman' => 'America/Bogota',
   'America/Coral_Harbour' => 'America/Bogota',
   'America/Cordoba' => 'America/Buenos_Aires',
   'America/Costa_Rica' => 'America/Regina',
@@ -152,7 +151,6 @@ $timezones_exact_map = array (
   'America/Resolute' => 'America/Chicago',
   'America/Rio_Branco' => 'America/Bogota',
   'America/Rosario' => 'America/Buenos_Aires',
-  'America/Santa_Isabel' => 'America/Los_Angeles',
   'America/Santarem' => 'America/Buenos_Aires',
   'America/Santo_Domingo' => 'America/Manaus',
   'America/Scoresbysund' => 'Atlantic/Azores',
@@ -267,7 +265,6 @@ $timezones_exact_map = array (
   'Brazil/DeNoronha' => 'America/Noronha',
   'Brazil/East' => 'America/Sao_Paulo',
   'Brazil/West' => 'America/Manaus',
-  'CET' => 'Europe/Amsterdam',
   'CST6CDT' => 'America/Chicago',
   'Canada/Atlantic' => 'America/Halifax',
   'Canada/Central' => 'America/Chicago',
@@ -281,8 +278,6 @@ $timezones_exact_map = array (
   'Chile/Continental' => 'America/Santiago',
   'Chile/EasterIsland' => 'Pacific/Easter',
   'Cuba' => 'America/Havana',
-  'EET' => 'Europe/Athens',
-  'EST' => 'America/New_York',
   'EST5EDT' => 'America/New_York',
   'Egypt' => 'Africa/Cairo',
   'Eire' => 'Europe/London',
@@ -304,7 +299,7 @@ $timezones_exact_map = array (
   'Etc/GMT-12' => 'Asia/Anadyr',
   'Etc/GMT-13' => 'Pacific/Tongatapu',
   'Etc/GMT-14' => 'Pacific/Kiritimati',
-  'Etc/GMT-2' => 'Africa/Harare',
+  'Etc/GMT-2' => 'Africa/Cairo',
   'Etc/GMT-3' => 'Europe/Moscow',
   'Etc/GMT-4' => 'Asia/Muscat',
   'Etc/GMT-5' => 'Asia/Tashkent',
@@ -325,15 +320,15 @@ $timezones_exact_map = array (
   'Europe/Bucharest' => 'Europe/Athens',
   'Europe/Budapest' => 'Europe/Amsterdam',
   'Europe/Busingen' => 'Europe/Amsterdam',
+  'Europe/Chisinau' => 'Europe/Athens',
   'Europe/Copenhagen' => 'Europe/Amsterdam',
   'Europe/Dublin' => 'Europe/London',
   'Europe/Gibraltar' => 'Europe/Amsterdam',
   'Europe/Guernsey' => 'Europe/London',
   'Europe/Isle_of_Man' => 'Europe/London',
-  'Europe/Istanbul' => 'Asia/Istanbul',
+  'Europe/Istanbul' => 'Europe/Athens',
   'Europe/Jersey' => 'Europe/London',
   'Europe/Kiev' => 'Europe/Athens',
-  'Europe/Kirov' => 'Europe/Moscow',
   'Europe/Lisbon' => 'Europe/London',
   'Europe/Ljubljana' => 'Europe/Amsterdam',
   'Europe/Luxembourg' => 'Europe/Amsterdam',
@@ -356,7 +351,7 @@ $timezones_exact_map = array (
   'Europe/Stockholm' => 'Europe/Amsterdam',
   'Europe/Tallinn' => 'Europe/Athens',
   'Europe/Tirane' => 'Europe/Amsterdam',
-  'Europe/Ulyanovsk' => 'Europe/Astrakhan',
+  'Europe/Tiraspol' => 'Europe/Athens',
   'Europe/Uzhgorod' => 'Europe/Athens',
   'Europe/Vaduz' => 'Europe/Amsterdam',
   'Europe/Vatican' => 'Europe/Amsterdam',
@@ -369,12 +364,8 @@ $timezones_exact_map = array (
   'Factory' => 'Africa/Monrovia',
   'GB' => 'Europe/London',
   'GB-Eire' => 'Europe/London',
-  'GMT' => 'Africa/Monrovia',
-  'GMT+0' => 'Africa/Monrovia',
-  'GMT-0' => 'Africa/Monrovia',
   'GMT0' => 'Africa/Monrovia',
   'Greenwich' => 'Africa/Monrovia',
-  'HST' => 'Pacific/Honolulu',
   'Hongkong' => 'Asia/Chongqing',
   'Iceland' => 'Africa/Monrovia',
   'Indian/Antananarivo' => 'Europe/Moscow',
@@ -392,9 +383,7 @@ $timezones_exact_map = array (
   'Jamaica' => 'America/Bogota',
   'Japan' => 'Asia/Tokyo',
   'Kwajalein' => 'Asia/Anadyr',
-  'Libya' => 'Africa/Harare',
-  'MET' => 'Europe/Amsterdam',
-  'MST' => 'America/Denver',
+  'Libya' => 'Africa/Cairo',
   'MST7MDT' => 'America/Denver',
   'Mexico/BajaNorte' => 'America/Los_Angeles',
   'Mexico/BajaSur' => 'America/Chihuahua',
@@ -436,8 +425,7 @@ $timezones_exact_map = array (
   'ROC' => 'Asia/Chongqing',
   'ROK' => 'Asia/Tokyo',
   'Singapore' => 'Asia/Chongqing',
-  'Turkey' => 'Asia/Istanbul',
-  'UCT' => 'Africa/Monrovia',
+  'Turkey' => 'Europe/Athens',
   'US/Alaska' => 'America/Anchorage',
   'US/Aleutian' => 'America/Adak',
   'US/Arizona' => 'America/Phoenix',
@@ -454,21 +442,31 @@ $timezones_exact_map = array (
   'UTC' => 'Africa/Monrovia',
   'Universal' => 'Africa/Monrovia',
   'W-SU' => 'Europe/Moscow',
-  'WET' => 'Europe/Amsterdam',
   'Zulu' => 'Africa/Monrovia',
 );
 $timezones_nomap = array (
-  0 => 'America/Metlakatla',
-  1 => 'Antarctica/Troll',
-  2 => 'Europe/Chisinau',
-  3 => 'Pacific/Gambier',
-  4 => 'Pacific/Pitcairn',
+  0 => 'America/Cayman',
+  1 => 'America/Metlakatla',
+  2 => 'America/Santa_Isabel',
+  3 => 'Antarctica/Troll',
+  4 => 'Pacific/Gambier',
+  5 => 'Pacific/Pitcairn',
 );
 $timezones_nomap_obsolete = array (
-  0 => 'Etc/GMT+12',
-  1 => 'Etc/GMT+8',
-  2 => 'Etc/GMT+9',
-  3 => 'Europe/Tiraspol',
+  0 => 'CET',
+  1 => 'EET',
+  2 => 'EST',
+  3 => 'Etc/GMT+12',
+  4 => 'Etc/GMT+8',
+  5 => 'Etc/GMT+9',
+  6 => 'GMT',
+  7 => 'GMT+0',
+  8 => 'GMT-0',
+  9 => 'HST',
+  10 => 'MET',
+  11 => 'MST',
+  12 => 'UCT',
+  13 => 'WET',
 );
 $timezones_probe_map = array (
   '-660:-660:-660:-660:-660:-660' => 
@@ -664,7 +662,7 @@ $timezones_probe_map = array (
     0 => 'Europe/Athens',
     1 => 'Europe/Helsinki',
   ),
-  '120:180:120:180:180:120:120:180:120' => 
+  '120:180:120:180:180:120:120:180:120:180' => 
   array (
     0 => 'Asia/Beirut',
   ),
@@ -700,7 +698,7 @@ $timezones_probe_map = array (
   array (
     0 => 'Asia/Baghdad',
   ),
-  '120:180:120:180:180:120:120:180:180' => 
+  '120:180:120:180:180:120:120:180:120:120' => 
   array (
     0 => 'Asia/Istanbul',
   ),
@@ -713,7 +711,7 @@ $timezones_probe_map = array (
   array (
     0 => 'Europe/Minsk',
   ),
-  '180:240:180:240:240:240:240:180:180:180' => 
+  '180:240' => 
   array (
     0 => 'Europe/Moscow',
   ),
@@ -724,10 +722,6 @@ $timezones_probe_map = array (
   '240:240:240:240' => 
   array (
     0 => 'Asia/Muscat',
-  ),
-  '180:240:180:240:240:240:240:180:180:240' => 
-  array (
-    0 => 'Europe/Astrakhan',
   ),
   '240:300:240:300:300:240:240:300' => 
   array (
@@ -785,21 +779,17 @@ $timezones_probe_map = array (
   array (
     0 => 'Asia/Dhaka',
   ),
-  '360:420:360:420:420:420:420:360:360:360' => 
-  array (
-    0 => 'Asia/Novosibirsk',
-  ),
   390 => 
   array (
     0 => 'Asia/Rangoon',
   ),
+  '360:420' => 
+  array (
+    0 => 'Asia/Novosibirsk',
+  ),
   '420:420:420:420' => 
   array (
     0 => 'Asia/Bangkok',
-  ),
-  '360:420:360:420:420:420:420:360:360:420' => 
-  array (
-    0 => 'Asia/Barnaul',
   ),
   '420:420:420:480' => 
   array (
@@ -808,10 +798,6 @@ $timezones_probe_map = array (
   '420:480' => 
   array (
     0 => 'Asia/Krasnoyarsk',
-  ),
-  '360:420:420' => 
-  array (
-    0 => 'Asia/Tomsk',
   ),
   '480:480:480:480' => 
   array (
@@ -831,9 +817,11 @@ $timezones_probe_map = array (
   array (
     0 => 'Asia/Ulaanbaatar',
   ),
-  '540:540:540:540:540:540:540:510' => 
+  '540:540' => 
   array (
-    0 => 'Asia/Pyongyang',
+    0 => 'Asia/Tokyo',
+    1 => 'Asia/Pyongyang',
+    2 => 'Asia/Seoul',
   ),
   585 => 
   array (
@@ -842,11 +830,6 @@ $timezones_probe_map = array (
   '540:600:540:600:600:600:600:480' => 
   array (
     0 => 'Asia/Chita',
-  ),
-  '540:540:540:540:540:540:540:540' => 
-  array (
-    0 => 'Asia/Tokyo',
-    1 => 'Asia/Seoul',
   ),
   '540:600:540:600:600:600:600:540' => 
   array (
@@ -873,9 +856,10 @@ $timezones_probe_map = array (
   array (
     0 => 'Australia/Hobart',
   ),
-  '600:660:600:660:660:660:660:600:600:600' => 
+  '600:660' => 
   array (
     0 => 'Asia/Vladivostok',
+    1 => 'Asia/Sakhalin',
   ),
   '660:630' => 
   array (
@@ -896,10 +880,6 @@ $timezones_probe_map = array (
   690 => 
   array (
     0 => 'Pacific/Norfolk',
-  ),
-  '600:660:600:660:660:660:660:600:600:660' => 
-  array (
-    0 => 'Asia/Sakhalin',
   ),
   '660:660' => 
   array (
