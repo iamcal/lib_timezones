@@ -88,6 +88,16 @@ libraries as follows:
     grunt
 
 
+## Timezone DB
+
+To update to the latest version of the timezone DB:
+
+    sudo pecl upgrade timezonedb
+    grunt
+
+This will rebuild the data files, embedding the timezone DB version into the file.   
+
+
 ## Caveats
 
 *  Not every timezone is included here. There are many that don't have any residents or don't 

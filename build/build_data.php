@@ -115,6 +115,7 @@
 
 
 	fputs($fh, "<"."?php\n");
+	fputs($fh, "# built from timezonedb version ".timezone_version_get()."\n");
 	fputs($fh, "\$timezones_exact_map = ".var_export($exacts, true).";\n");
 	fputs($fh, "\$timezones_nomap = ".var_export($no_map_core, true).";\n");
 	fputs($fh, "\$timezones_nomap_obsolete = ".var_export($no_map_obsolete, true).";\n");
