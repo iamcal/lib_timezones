@@ -785,13 +785,13 @@ $timezones_probe_map = array (
   array (
     0 => 'Asia/Dhaka',
   ),
-  '360:420:360:420:420:420:420:360:360:360' => 
-  array (
-    0 => 'Asia/Novosibirsk',
-  ),
   390 => 
   array (
     0 => 'Asia/Rangoon',
+  ),
+  '360:420:360:420:420:420:420:360:360:360' => 
+  array (
+    0 => 'Asia/Novosibirsk',
   ),
   '420:420:420:420' => 
   array (
