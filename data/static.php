@@ -87,7 +87,7 @@
 		array('(UTC+03:00) Nairobi',						'Africa/Nairobi',		false,	'East Africa Time',			null),
 		array('(UTC+03:30) Tehran',						'Asia/Tehran',			false,	'Iran Standard Time',			'Iran Daylight Time'),
 		array('(UTC+04:00) Abu Dhabi, Muscat',					'Asia/Muscat',			true,	'Gulf Standard Time',			null),
-		array('(UTC+04:00) Astrakhan, Ulyanovsk',				'Europe/Astrakhan',		false,	'Moscow Standard Time',			'Moscow Standard Time +1'), # weird name: http://www.timeanddate.com/news/time/russia-astrakhan-time-zone.html
+		array('(UTC+04:00) Astrakhan, Ulyanovsk',				'Europe/Astrakhan',		false,	'Samara Standard Time',			null), # https://www.timeanddate.com/time/zone/russia/astrakhan
 		array('(UTC+04:00) Baku',						'Asia/Baku',			true,	'Azerbaijan Time',			'Azerbaijan Summer Time'),
 		array('(UTC+04:00) Izhevsk, Samara',					'Europe/Samara',		false,	'Samara Time',				null), # RTZ3
 		array('(UTC+04:00) Port Louis',						'Indian/Mauritius',		false,	'Mauritius Time',			null),
