@@ -179,7 +179,6 @@
 	# would be better than just giving up/using a default.
 
 	$timezones_fallback_map = array(
-		"America/Fort_Nelson"	=> "America/Denver", # switched to mountain time Mar 8th 2015
 	);
 
 
