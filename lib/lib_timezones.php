@@ -294,7 +294,6 @@
 			'Australia/Sydney' => 'Australia/Canberra',
 			'Pacific/Port_Moresby' => 'Pacific/Guam',
 			'Asia/Kamchatka' => 'Asia/Anadyr',
-			'WET' => 'Europe/Amsterdam',
 		);
 		$auto_map = array(
 			'Africa/Abidjan' => 'Africa/Monrovia',
