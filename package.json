@@ -24,7 +24,14 @@
     "phantomjs-prebuilt": "~2.1.7"
   },
   "scripts": {
-    "test": "grunt karma"
+    "compile": "php build/build_data.php && php build/build_php.php > lib/lib_timezones.php && php build/build_js.php > lib/lib_timezones.js",
+    "js-uglify": "echo \"/* $(npm -s run env echo '$npm_package_name') $(date +%Y-%m-%d) */\" > lib/lib_timezones.min.js; ./node_modules/.bin/uglifyjs -c -m -- lib/lib_timezones.js >> lib/lib_timezones.min.js",
+    "js-test": "./node_modules/.bin/karma start karma.conf.js --single-run --browsers PhantomJS --log-level ERROR",
+    "js-coverage": "./node_modules/.bin/karma start karma-cover.conf.js --single-run --browsers PhantomJS --log-level disable",
+    "php-test": "prove --exec 'php' -fco test/simple.php",
+    "test": "npm run js-test && npm run php-test",
+    "coverage": "npm run js-coverage",
+    "build": "npm run compile && npm run js-uglify && npm run test && npm run coverage"
   },
   "repository": {
     "type": "git",
