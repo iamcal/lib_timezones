@@ -19,6 +19,8 @@
 	foreach (timezone_identifiers_list(DateTimeZone::ALL_WITH_BC) as $zone_id){
 		if ($zone_id == 'leap-seconds.list') continue;
 		if ($zone_id == 'localtime') continue;
+		if ($zone_id == 'tzdata.zi') continue;
+		if ($zone_id == 'leapseconds') continue;
 
 		$tz = timezone_open($zone_id);
 		if ($tz){
