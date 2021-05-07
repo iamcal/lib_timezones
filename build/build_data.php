@@ -12,8 +12,8 @@
 	# this allows us to map equivalent zones.
 	#
 
-	$from = mktime(0,0,0,1,1,2015);
-	$to   = mktime(0,0,0,1,1,2020);
+	$from = mktime(0,0,0,1,1,2020);
+	$to   = mktime(0,0,0,1,1,2025);
 
 	$hashes = array();
 	foreach (timezone_identifiers_list(DateTimeZone::ALL_WITH_BC) as $zone_id){
@@ -110,6 +110,16 @@
 
 
 	#
+	# get tzdata version
+	#
+
+	$version = timezone_version_get();
+	if ($version == '0.system'){
+		$version = shell_exec("dpkg -s tzdata | grep Version | sed 's/^Version: //'");
+	}
+
+
+	#
 	# output our calculated data
 	#
 
@@ -117,7 +127,7 @@
 
 
 	fputs($fh, "<"."?php\n");
-	fputs($fh, "# built from timezonedb version ".timezone_version_get()."\n");
+	fputs($fh, "# built from timezonedb version {$version}\n");
 	fputs($fh, "\$timezones_exact_map = ".var_export($exacts, true).";\n");
 	fputs($fh, "\$timezones_nomap = ".var_export($no_map_core, true).";\n");
 	fputs($fh, "\$timezones_nomap_obsolete = ".var_export($no_map_obsolete, true).";\n");
