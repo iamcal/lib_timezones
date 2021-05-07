@@ -1,6 +1,7 @@
 # Sensible Timezone Selection
 
-[![Build Status](https://travis-ci.org/iamcal/lib_timezones.svg)](https://travis-ci.org/iamcal/lib_timezones) [![Coverage Status](https://coveralls.io/repos/github/iamcal/lib_timezones/badge.svg?branch=master)](https://coveralls.io/github/iamcal/lib_timezones?branch=master)
+[![Build Status](https://github.com/iamcal/lib_timezones/actions/workflows/build.yml/badge.svg)](https://github.com/iamcal/lib_timezones/actions)
+[![Coverage Status](https://coveralls.io/repos/github/iamcal/lib_timezones/badge.svg?branch=master)](https://coveralls.io/github/iamcal/lib_timezones?branch=master)
 
 If the software you're building requires that users select their timezone, then 
 you'll need to get a list of timezones from somewhere. These are some bad ways to do it:
