@@ -56,7 +56,7 @@ If you want to display a human readable zone label, there's a function for that 
     echo "It's currently ".date('H:i')." ".timezones_label($zone);
     // e.g. "It's currently 10:32 Cuba Daylight Time"
 
-The labnel will take into account daylight savings in the specified zone.
+The label will take into account daylight savings in the specified zone.
 
 
 ## Usage - Auto-detecting a Timezone from JavaScript
@@ -85,18 +85,18 @@ other are defined in `data/static.php`. When you modify that file, you'll need t
 libraries as follows:
 
     npm install // first time only
-    bower install // first time only
-    grunt
+    npm run build
 
 
 ## Timezone DB
 
 To update to the latest version of the timezone DB:
 
-    sudo pecl upgrade timezonedb
-    grunt
+    sudo apt-get update
+    sudo apt-get install tzdata
+    npm run build
 
-This will rebuild the data files, embedding the timezone DB version into the file.   
+This will rebuild the data files, embedding the timezone DB version into the file.
 
 
 ## Caveats
