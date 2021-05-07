@@ -30,7 +30,7 @@
 	is(timezones_filter("Europe/London"), "Europe/London", "filtering a choice");
 	is(timezones_filter("America/Guatemala"), "America/Belize", "filtering a manual override");
 	is(timezones_filter("Africa/Abidjan"), "Africa/Monrovia", "filtering an automatic override");
-	is(timezones_filter("America/Fort_Nelson"), "America/Denver", "filtering a fallback");
+	is(timezones_filter("America/Fort_Nelson"), "America/Phoenix", "filtering a fallback");
 	is(timezones_filter("Fake/Zone"), null, "filtering a bad ID - null");
 	is(timezones_filter("Fake/Zone", "wibble"), "wibble", "filtering a bad ID - default");
 
