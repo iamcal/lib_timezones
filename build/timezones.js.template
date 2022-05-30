@@ -13,6 +13,11 @@ function timezones_guess(){
 	return ret.zoneId;
 }
 
+window.get_canonical_timezone = function(alt_tz, default_tz) {
+	var tz = new TimezoneDetector();
+	return tz.getCanonicalTimezone(alt_tz,  default_tz);
+}
+
 ;(function() {
 
 	var root = this;
@@ -84,6 +89,21 @@ function timezones_guess(){
 			//console.log('no match for TZ on key '+key);
 
 			return out;
+		}
+
+		self.getCanonicalTimezone = function(alt_tz, default_tz) {
+			// check list
+			for (var i=0; i<_list.length; i++) {
+				if(_list[i][1] == alt_tz) return alt_tz
+			}
+
+			// chekc auto alts
+			if(_auto_alts[alt_tz]) return _auto_alts[alt_tz];
+			
+			//check manual alts
+			if(_manual_alts[alt_tz]) return _manual_alts[alt_tz];
+			
+			return default_tz;
 		}
 
 		var _try_using_api = function(){

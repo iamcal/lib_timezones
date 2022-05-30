@@ -1,6 +1,5 @@
 <?php
-# built from timezonedb version 2021a-0ubuntu0.20.04
-
+# built from timezonedb version 2020.4
 $timezones_exact_map = array (
   'Africa/Abidjan' => 'Africa/Monrovia',
   'Africa/Accra' => 'Africa/Monrovia',
@@ -24,6 +23,7 @@ $timezones_exact_map = array (
   'Africa/Freetown' => 'Africa/Monrovia',
   'Africa/Gaborone' => 'Africa/Windhoek',
   'Africa/Johannesburg' => 'Africa/Windhoek',
+  'Africa/Juba' => 'Europe/Moscow',
   'Africa/Kampala' => 'Europe/Moscow',
   'Africa/Khartoum' => 'Africa/Windhoek',
   'Africa/Kigali' => 'Africa/Windhoek',
@@ -362,6 +362,7 @@ $timezones_exact_map = array (
   'Europe/Vatican' => 'Europe/Amsterdam',
   'Europe/Vienna' => 'Europe/Amsterdam',
   'Europe/Vilnius' => 'Europe/Athens',
+  'Europe/Volgograd' => 'Asia/Baku',
   'Europe/Zagreb' => 'Europe/Amsterdam',
   'Europe/Zaporozhye' => 'Europe/Athens',
   'Europe/Zurich' => 'Europe/Amsterdam',
@@ -429,17 +430,6 @@ $timezones_exact_map = array (
   'ROC' => 'Asia/Ulaanbaatar',
   'ROK' => 'Asia/Tokyo',
   'Singapore' => 'Asia/Ulaanbaatar',
-  'SystemV/AST4' => 'America/Manaus',
-  'SystemV/AST4ADT' => 'America/Halifax',
-  'SystemV/CST6' => 'America/Regina',
-  'SystemV/CST6CDT' => 'America/Chicago',
-  'SystemV/EST5' => 'America/Bogota',
-  'SystemV/EST5EDT' => 'America/New_York',
-  'SystemV/HST10' => 'Pacific/Honolulu',
-  'SystemV/MST7' => 'America/Phoenix',
-  'SystemV/MST7MDT' => 'America/Denver',
-  'SystemV/PST8PDT' => 'America/Los_Angeles',
-  'SystemV/YST9YDT' => 'America/Anchorage',
   'Turkey' => 'Europe/Moscow',
   'US/Alaska' => 'America/Anchorage',
   'US/Aleutian' => 'America/Adak',
@@ -459,16 +449,14 @@ $timezones_exact_map = array (
   'Zulu' => 'Africa/Monrovia',
 );
 $timezones_nomap = array (
-  0 => 'Africa/Juba',
-  1 => 'America/Dawson',
-  2 => 'America/Whitehorse',
-  3 => 'Antarctica/Casey',
-  4 => 'Antarctica/Troll',
-  5 => 'Europe/Chisinau',
-  6 => 'Europe/Dublin',
-  7 => 'Europe/Volgograd',
-  8 => 'Pacific/Gambier',
-  9 => 'Pacific/Pitcairn',
+  0 => 'America/Dawson',
+  1 => 'America/Whitehorse',
+  2 => 'Antarctica/Casey',
+  3 => 'Antarctica/Troll',
+  4 => 'Europe/Chisinau',
+  5 => 'Europe/Dublin',
+  6 => 'Pacific/Gambier',
+  7 => 'Pacific/Pitcairn',
 );
 $timezones_nomap_obsolete = array (
   0 => 'CET',
@@ -486,10 +474,8 @@ $timezones_nomap_obsolete = array (
   12 => 'HST',
   13 => 'MET',
   14 => 'MST',
-  15 => 'SystemV/PST8',
-  16 => 'SystemV/YST9',
-  17 => 'UCT',
-  18 => 'WET',
+  15 => 'UCT',
+  16 => 'WET',
 );
 $timezones_probe_map = array (
   '-660:-660:-660:-660:-660:-660' => 
