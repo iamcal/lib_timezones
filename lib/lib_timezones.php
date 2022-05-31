@@ -698,6 +698,7 @@
 			'Pacific/Funafuti' => 'Asia/Anadyr',
 			'Pacific/Galapagos' => 'America/Regina',
 			'Pacific/Johnston' => 'Pacific/Honolulu',
+			'Pacific/Kanton' => 'Pacific/Tongatapu',
 			'Pacific/Kosrae' => 'Pacific/Bougainville',
 			'Pacific/Kwajalein' => 'Asia/Anadyr',
 			'Pacific/Majuro' => 'Asia/Anadyr',

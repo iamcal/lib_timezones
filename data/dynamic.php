@@ -1,5 +1,5 @@
 <?php
-# built from timezonedb version 2021a-0ubuntu0.20.04
+# built from timezonedb version 2022a-0ubuntu0.20.04
 
 $timezones_exact_map = array (
   'Africa/Abidjan' => 'Africa/Monrovia',
@@ -404,6 +404,7 @@ $timezones_exact_map = array (
   'Pacific/Funafuti' => 'Asia/Anadyr',
   'Pacific/Galapagos' => 'America/Regina',
   'Pacific/Johnston' => 'Pacific/Honolulu',
+  'Pacific/Kanton' => 'Pacific/Tongatapu',
   'Pacific/Kosrae' => 'Pacific/Bougainville',
   'Pacific/Kwajalein' => 'Asia/Anadyr',
   'Pacific/Majuro' => 'Asia/Anadyr',
